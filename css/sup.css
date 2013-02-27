@@ -36,6 +36,15 @@
     background: #ECECEC;
 }
 
+#add-oeuvre {
+
+    float: right;
+    margin-top: 10px;
+}
+
+.button {
+    cursor: pointer;
+}
 .myform input {
     width: 80%;
 }
