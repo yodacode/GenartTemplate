@@ -40,6 +40,9 @@ h2 {
 .button.red {
   background: #40b7a0;
 }
+.button.grey {
+    background: #cccccc;
+}
 .auto {
   margin: 0 auto;
 }

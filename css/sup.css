@@ -8,3 +8,11 @@
     height: 390px;
     background: gray;
 }
+
+ .noborder{
+    border-style: initial;
+}
+
+#form-art .button {
+    width: 80px;
+}

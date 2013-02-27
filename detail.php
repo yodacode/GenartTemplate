@@ -18,19 +18,31 @@
                 </p>
             </div>
         </div>
-        
+
         <div class="span8">
             <div id="appercu">
-                
+
             </div>
         </div>
         <div class="span4">
-            <form>
-                <input type="text" name="val1">
-                <input type="text" name="val2">
-                <input type="text" name="val3">
-                <input type="text" name="val4">
-                <input type="submit" value="Valider">
+            <form id="form-art">
+                <div class="span3">
+                    Value 1 : <input type="text" name="val1">
+                </div>
+                <div class="span3">
+                    Value 2 : <input type="text" name="val2">
+                </div>
+                <div class="span3">
+                    Value 3 : <input type="text" name="val3">
+                </div>
+                <div class="span3">
+                    Value 4 : <input type="text" name="val4">
+                </div>
+                <div class="span3">
+                    <a class="button grey"value="Reset">Reset</a> 
+                    <input class="button red noborder" type="submit" value="Valider">
+                </div>
+
             </form>
 
         </div>
