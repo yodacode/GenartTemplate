@@ -7,7 +7,7 @@
     <!-- Bootstrap -->
     <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet" media="screen"/>
     <link href="css/bootstrap/bootstrap-responsive.css" rel="stylesheet"/>
-    <link href='http://fonts.googleapis.com/css?family=Monda|Julius+Sans+One' rel='stylesheet' type='text/css'/>
+    <!--<link href='http://fonts.googleapis.com/css?family=Monda|Julius+Sans+One' rel='stylesheet' type='text/css'/>-->
     <link href="css/style.css" rel="stylesheet"/>
     <link href="css/sup.css" rel="stylesheet"/>
     
@@ -35,14 +35,14 @@
 
           <section class="nav-collapse span9 collapse">
             <ul class="nav pull-right">
-              <li class="active"><a href="index.html">Accueil</a></li>
+              <li class="active"><a href="home.html">Accueil</a></li>
               <li class="dropdown">
-                <a href="#">Artistes</a>
+                <a href="artist.html">Artistes</a>
               </li>
               <li><a href="listing.html">Gallerie</a></li>
-              <li><a href="#">Contact</a></li>
+              <li><a href="contact.html">Contact</a></li>
               <li class="divider-vertical"></li>
-              <li><a class="button green" href="#">Mes oeuvres (5)</a></li>
+              <li><a class="button green" href="selection.html">Mes oeuvres (5)</a></li>
             </ul>
           </section>
 
@@ -56,17 +56,17 @@
       $(function(){
         
 
-        var $href = 'index.html';
+        var $href = 'home.html';
         var isAllow = true;
 
         var initDom = function(){
           $('a').on('click', function(e){
             e.preventDefault();
-            load($(this).attr('href'));
+            loadPage($(this).attr('href'));
           });
         };
 
-        var load = function(href){
+        var loadPage = function(href){
           if(href != $href && isAllow)
             isAllow = false;
             $.ajax({
@@ -86,7 +86,7 @@
             });
         };
         
-        load($href);
+        loadPage($href);
         
         
 

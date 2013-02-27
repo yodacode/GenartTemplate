@@ -7,6 +7,11 @@ h1,h2,h3 {
 	font-weight: normal;
 }
 
+.loader {
+	position: absolute;
+	top: 300px;
+}
+
 h1 {
 	color: #525252;
 	font-size: 25.5px;
