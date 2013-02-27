@@ -4,12 +4,28 @@
   <header class="header">
     <section class="container">
       <h3>Gallerie categorie : lorem ipsum</h3>
-
     </section>
-    <button class="btn btn-primary visible-phone">sdqdqsd</button>
   </header>
 
   <section class="content">
+
+    <div class="container">
+      <form class="form-inline pull-right">
+        <label>Categorie : </label>
+        <select>
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+        </select>
+        <label for="date">Date :</label>
+        <input id="date" type="text" name="date"/>
+        <input class="button red" type="submit" value="Filtrer">
+      </form>
+    </div>
+
+    <div class="spacer"></div>
     <section class="container-fluid">
       <article class="span4 article-thumb">
         <figure>
