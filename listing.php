@@ -21,7 +21,7 @@
         </select>
         <label for="date">Date :</label>
         <input id="date" type="text" name="date"/>
-        <input class="button red" type="submit" value="Filtrer">
+        <input class="button red noborder" type="submit" value="Filtrer">
       </form>
     </div>
 

@@ -47,10 +47,30 @@ h2 {
 }
 
 .button.green {
-	background: @green;
+	background: @green !important;
+}
+
+.button.green:visited {
+	background: @green !important;
+}
+
+.button.green:active {
+	background: @green !important;
+}
+
+.button.green:hover {
+	background: @green !important;
 }
 
 .button.red {
+	background: @red;
+}
+
+.button.red:visited {
+	background: @red;
+}
+
+.button.red:hover {
 	background: @red;
 }
 
@@ -64,11 +84,17 @@ h2 {
 }
 
 .article-thumb {
-	-moz-box-shadow: 1px 0px 4px @dark;
-	-webkit-box-shadow: 1px 0px 4px @dark;
-	box-shadow: 1px 0px 4px @dark;
-	filter: progid:DXImageTransform.Microsoft.Shadow(strength = 1, direction = 90, color = @dark);
-	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(strength = 1, Direction = 90, Color = @dark)";
+
+
+	-moz-box-shadow: 0px 0px 9px #a0a0a0;
+	-webkit-box-shadow: 0px 0px 9px #a0a0a0;
+	box-shadow: 0px 0px 9px #a0a0a0;
+	/*IE 7 AND 8 DO NOT SUPPORT BLUR PROPERTY OF SHADOWS*/
+	border:solid 1px #bababa;
+
+
+	background:#f3f3f3;
+
 	overflow:hidden;
 	position:relative;
 	padding-bottom:30px;
