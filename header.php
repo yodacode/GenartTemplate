@@ -9,6 +9,7 @@
     <link href="css/bootstrap/bootstrap-responsive.css" rel="stylesheet"/>
     <link href='http://fonts.googleapis.com/css?family=Monda|Julius+Sans+One' rel='stylesheet' type='text/css'/>
     <link href="css/style.css" rel="stylesheet">
+    <link href="css/sup.css" rel="stylesheet">
     
     <!--<script src="http://code.jquery.com/jquery-latest.js"></script>-->
     <script src="js/jquery.js"></script>
