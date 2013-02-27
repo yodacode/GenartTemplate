@@ -40,37 +40,21 @@ h2 {
 	border-bottom: dashed 2px #dbdbdb;
 }
 
+label {
+	margin-right: 7px;
+}
+
 .button:hover {
 	text-decoration: none;
 	background: #525252 !important;
 }
 
-.button.green {
+.button.green,.button.green:hover,.button.green:active,.button.green:visited {
 	background: #40b7a0 !important;
 }
 
-.button.green:visited {
-	background: #40b7a0 !important;
-}
-
-.button.green:active {
-	background: #40b7a0 !important;
-}
-
-.button.green:hover {
-	background: #40b7a0 !important;
-}
-
-.button.red {
-	background: #ec4343;
-}
-
-.button.red:visited {
-	background: #ec4343;
-}
-
-.button.red:hover {
-	background: #ec4343;
+.button.red,.button.red:hover,.button.red:active,.button.red:visited {
+	background: #ec4343 !important;
 }
 
 .auto {
