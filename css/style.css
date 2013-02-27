@@ -1,0 +1,120 @@
+* {
+  list-style: none;
+  color: #525252;
+}
+h1 {
+  font-weight: normal;
+  font-family: 'Julius Sans One', sans-serif;
+  color: #525252;
+  font-size: 30.5px;
+}
+h2 {
+  font-weight: normal;
+  font-family: 'Julius Sans One', sans-serif;
+  color: #525252;
+  font-size: 22.5px;
+}
+.button {
+  display: inline-block;
+  color: #FFF !important;
+  font-size: 12px;
+  text-align: center;
+  padding: 7px;
+  font-weight: normal !i
+	;
+}
+.spacer {
+  width: 85%;
+  margin: 0 auto;
+  height: 35px;
+  margin-bottom: 15px;
+  border-bottom: dashed 2px #dbdbdb;
+}
+.button:hover {
+  text-decoration: none;
+  background: #40b7a0 !important;
+}
+.button.green {
+  background: #40b7a0;
+}
+.button.red {
+  background: #40b7a0;
+}
+.auto {
+  margin: 0 auto;
+}
+.red {
+  background: #FF0;
+}
+.article-thumb {
+  -moz-box-shadow: 1px 0px 4px #525252;
+  -webkit-box-shadow: 1px 0px 4px #525252;
+  box-shadow: 1px 0px 4px #525252;
+  filter: progid:dximagetransform.microsoft.shadow(strength=1, direction=90, color=#525252);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(strength = 1, Direction = 90, Color = @dark)";
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 30px;
+  margin-bottom: 20px;
+  height: 350px;
+}
+.article-thumb figure {
+  padding: 0 0 0 0;
+  margin: 0 0 0 0;
+  overflow: hidden;
+  height: 160px;
+}
+.article-thumb figure img {
+  width: 100%;
+}
+.article-thumb h3 {
+  padding: 10px 10px 0px 10px;
+  margin: 0px;
+}
+.article-thumb p {
+  padding: 10px;
+  display: block;
+  overflow: hidden;
+  height: 105px;
+  margin-bottom: 15px;
+}
+.article-thumb .button {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+}
+.artist-list {
+  overflow: hidden;
+}
+.artist-list li {
+  float: left;
+  margin-right: 15px;
+  margin-bottom: 15px;
+}
+.navbar .navbar-inner {
+  background: #FFF;
+  padding: 7px 0px 7px 0px;
+}
+.navbar .navbar-inner .nav {
+  margin-top: 15px;
+}
+.navbar .navbar-inner .nav .active a {
+  background: none;
+  box-shadow: none;
+  font-weight: bold;
+}
+.header {
+  background: #f3f3f3;
+  margin-top: 88px;
+  margin-bottom: 30px;
+  border-bottom: solid 1px #bababa;
+}
+.footer {
+  background: #1d1d1d;
+  text-align: center;
+  color: #FFF;
+  padding: 50px 0 50px 0;
+  margin-top: 30px;
+}
+
+/* This beautiful CSS-File has been crafted with LESS (lesscss.org) and compiled by simpLESS (wearekiss.com/simpless) */

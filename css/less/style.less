@@ -1,0 +1,141 @@
+@julius  :  'Julius Sans One', sans-serif;
+@green : #40b7a0;
+@red : #40b7a0;
+@dark : #525252;
+
+* {
+	list-style:none;
+	color:@dark;
+}
+
+h1 {
+	font-weight:normal;
+	font-family:@julius;
+	color:@dark;
+	font-size:30.5px;
+}
+
+h2 {
+	font-weight:normal;
+	font-family:@julius;
+	color:@dark;
+	font-size:22.5px;
+}
+
+.button {
+	display:inline-block;
+	color:#FFF !important;
+	font-size:12px;
+	text-align:center;
+	padding:7px;
+	font-weight:normal !i
+	;
+}
+
+.spacer {
+	width:85%;
+	margin:0 auto;
+	height:35px;
+	margin-bottom:15px;
+	border-bottom:dashed 2px #dbdbdb;
+}
+
+.button:hover {
+	text-decoration:none;
+	background:@green !important;
+}
+
+.button.green {
+	background: @green;
+}
+
+.button.red {
+	background: @red;
+}
+
+
+.auto {
+	margin: 0 auto;
+}
+
+.red {
+	background:#FF0;
+}
+
+.article-thumb {
+	-moz-box-shadow: 1px 0px 4px @dark;
+	-webkit-box-shadow: 1px 0px 4px @dark;
+	box-shadow: 1px 0px 4px @dark;
+	filter: progid:DXImageTransform.Microsoft.Shadow(strength = 1, direction = 90, color = @dark);
+	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(strength = 1, Direction = 90, Color = @dark)";
+	overflow:hidden;
+	position:relative;
+	padding-bottom:30px;
+	margin-bottom:20px;
+	height:350px;
+	figure {
+		padding: 0 0 0 0;
+		margin:0 0 0 0;
+		overflow:hidden;
+		height:160px;
+		img {
+			width:100%;
+		}
+	}
+	h3 {
+		padding:10px 10px 0px 10px;
+		margin:0px;
+	}
+	p {
+		padding:10px;
+		display:block;
+		overflow:hidden;
+		height:105px;
+		margin-bottom:15px;
+	}
+	.button {
+		position:absolute;
+		bottom:0px;
+		right:0px;
+	}
+
+}
+
+.artist-list {
+	overflow:hidden;
+	li {
+		float:left;
+		margin-right:15px;
+		margin-bottom:15px;
+	}
+}
+
+
+.navbar .navbar-inner {
+	background:#FFF;
+	padding:7px 0px 7px 0px;
+	.nav { 
+		margin-top:15px;
+		.active a{
+			background:none;
+			box-shadow:none;
+			font-weight:bold;
+		}
+	}
+}
+
+.header {	
+	background:#f3f3f3;
+	margin-top:88px;
+	margin-bottom:30px;
+	border-bottom:solid 1px #bababa;
+}
+
+.footer {
+	background:#1d1d1d;
+	text-align:center;
+	color:#FFF;
+	padding:50px 0 50px 0;
+	margin-top:30px;
+}
+
