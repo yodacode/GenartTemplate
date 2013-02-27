@@ -10,7 +10,6 @@
     <section class="container-fluid">
         <div class="span8">
             <div id="info-oeuvre">
-
                 <h3>Titre de l'oeuvre</h3>
                 <p>
                     Processing is an open source programming language and environment for people who want to create images, animations, and interactions. 
