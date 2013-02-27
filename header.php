@@ -29,17 +29,17 @@
           </button>
 
           <section class="logo span2">
-            <a href="./index.html"><img src="img/logo.png" alt=""/></a>
+            <a href="./index.php"><img src="img/logo.png" alt=""/></a>
           </section>
 
           <section class="nav-collapse span9 collapse">
             <ul class="nav pull-right">
-              <li class="active"><a href="./index.html">Accueil</a></li>
+              <li class="active"><a href="./index.php">Accueil</a></li>
               <li class="dropdown">
                 <a href="#">Artistes</a>
               </li>
-              <li class=""><a href="./base-css.html">Gallerie</a></li>
-              <li class=""><a href="./base-css.html">Contact</a></li>
+              <li class=""><a href="./listing.php">Gallerie</a></li>
+              <li class=""><a href="#">Contact</a></li>
               <li class="divider-vertical"></li>
               <li class=""><a class="button green" href="#">Mes oeuvres (5)</a></li>
             </ul>

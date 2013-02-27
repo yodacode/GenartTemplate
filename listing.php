@@ -20,7 +20,7 @@
           Processing is an open source programming language and environment for people who want to create images, animations, and interactions. 
           Initially developed to serve as a software sketchbook and to teach there are tens of thousands of students.
         </p>
-        <a href="#" class="button green">en savoir plus</a>
+        <a href="./detail.php" class="button green">en savoir plus</a>
       </article>
       <article class="span4 article-thumb">
         <figure>
@@ -31,7 +31,7 @@
           Processing is an open source programming language and environment for people who want to create images, animations, and interactions. 
           Initially developed to serve as a software sketchbook and to teach there are tens of thousands of students.
         </p>
-        <a href="#" class="button green">en savoir plus</a>
+        <a href="./detail.php" class="button green">en savoir plus</a>
       </article>
       <article class="span4 article-thumb">
         <figure>
@@ -42,7 +42,7 @@
           Processing is an open source programming language and environment for people who want to create images, animations, and interactions. 
           Initially developed to serve as a software sketchbook and to teach there are tens of thousands of students.
         </p>
-        <a href="#" class="button green">en savoir plus</a>
+        <a href="./detail.php" class="button green">en savoir plus</a>
       </article>
       <article class="span4 article-thumb">
         <figure>
@@ -53,7 +53,7 @@
           Processing is an open source programming language and environment for people who want to create images, animations, and interactions. 
           Initially developed to serve as a software sketchbook and to teach there are tens of thousands of students.
         </p>
-        <a href="#" class="button green">en savoir plus</a>
+        <a href="./detail.php" class="button green">en savoir plus</a>
       </article>
       <article class="span4 article-thumb">
         <figure>
@@ -64,7 +64,7 @@
           Processing is an open source programming language and environment for people who want to create images, animations, and interactions. 
           Initially developed to serve as a software sketchbook and to teach there are tens of thousands of students.
         </p>
-        <a href="#" class="button green">en savoir plus</a>
+        <a href="./detail.php" class="button green">en savoir plus</a>
       </article>
       <article class="span4 article-thumb">
         <figure>
@@ -75,7 +75,7 @@
           Processing is an open source programming language and environment for people who want to create images, animations, and interactions. 
           Initially developed to serve as a software sketchbook and to teach there are tens of thousands of students.
         </p>
-        <a href="#" class="button green">en savoir plus</a>
+        <a href="./detail.php" class="button green">en savoir plus</a>
       </article>
       <article class="span4 article-thumb">
         <figure>
@@ -86,7 +86,7 @@
           Processing is an open source programming language and environment for people who want to create images, animations, and interactions. 
           Initially developed to serve as a software sketchbook and to teach there are tens of thousands of students.
         </p>
-        <a href="#" class="button green">en savoir plus</a>
+        <a href="./detail.php" class="button green">en savoir plus</a>
       </article>
       <article class="span4 article-thumb">
         <figure>
@@ -97,7 +97,7 @@
           Processing is an open source programming language and environment for people who want to create images, animations, and interactions. 
           Initially developed to serve as a software sketchbook and to teach there are tens of thousands of students.
         </p>
-        <a href="#" class="button green">en savoir plus</a>
+        <a href="./detail.php" class="button green">en savoir plus</a>
       </article>
     </section>
     
