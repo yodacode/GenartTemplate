@@ -74,7 +74,6 @@
       <section class="span5">
         <p>
           Processing is an open source programming language and environment for people who want to create images, animations, and interactions. Initially developed to serve as a software sketchbook and to teach fundamentals of computer programming within a visual context, Processing also has evolved into a tool for generating finished professional work. Today.
-
           Processing is an open source programming language and environment for people who want to create images, animations, and interactions. Initially developed to serve as a software sketchbook and to teach fundamentals of computer programming within.
         </p>
       </section>
@@ -90,26 +89,14 @@
     <section class="container">
       <h2>Nos artistes</h2>
       <ul class="artist-list">
-        <li>
-          <a href="#">
-            <img src="img/artist.jpg" class="img-circle img-polaroid"/>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <img src="img/artist.jpg" class="img-circle img-polaroid"/>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <img src="img/artist.jpg" class="img-circle img-polaroid"/>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <img src="img/artist.jpg" class="img-circle img-polaroid"/>
-          </a>
-        </li>
+        <?php for($i=0; $i < 6; $i++) : ?>
+          <li>
+            <a href="#">
+              <img src="img/artist.jpg" class="img-circle img-polaroid"/>
+            </a>
+          </li>  
+        <?php endfor;?>
+  
       </ul>
     </section>
   </section><!--end content-->
