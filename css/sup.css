@@ -51,3 +51,11 @@
 #app-span {
     margin-bottom: 55px;
 }
+
+.cart figure, p {
+    float: left;
+}
+
+.cart figure {
+    margin: 0;
+}
