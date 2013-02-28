@@ -14,7 +14,7 @@
 
 			<form name="form-contact" class="form-horizontal">
 				<div id="name-control-group" class="control-group">
-					<label for="name" class="control-label">Nom : </label>
+					<label for="name" class="control-label">Nom * : </label>
 					<div class="controls">
 						<input type="text" id="name" name="name" data-error-selector="name-message" placeholder="Votre prénom"/>
 						<span class="help-inline" style="display: none;" id="name-message">
@@ -65,6 +65,9 @@
                 },
                 {
                     name: "message",
+                    rules: 'required'
+                },                {
+                    name: "name",
                     rules: 'required'
                 },
                 {
