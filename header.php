@@ -51,6 +51,7 @@
 
                 </section>
             </section>
+        <div class="divider-slice"></div>
         </nav>
     </section>
 </nav>

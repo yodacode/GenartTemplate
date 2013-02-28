@@ -7,14 +7,58 @@ var init = function(){
         $(this).tab('show');
     });
     
-    $('.button').live('mouseover' , function(){
-        $(this).fadeTo('fast', 0.6);
+    $('.button').on('mouseover' , function(){
+        $(this).stop().fadeTo('fast', 0.6);
     });
     
-    $('.button').live('mouseleave' , function(){
-        $(this).fadeTo('fast', 1);
+    $('.button').on('mouseleave' , function(){
+        $(this).stop().fadeTo('fast', 1);
     });
+
+
+    var $article = $('.article-thumb');
+
+    $article.on('click', function(){
+        var linkDetail = $(this).find('a').attr('href');
+        window.location = linkDetail;
+    });
+
+    var getGoodHeight = function($heightFigure, $heightImg){
+        var $height = null;
+        if ($heightFigure < $heightImg){
+            $height = $heightFigure;
+        } else {
+            $height = $heightImg;
+        }
+
+        return $height;
+    };
+
+    $article.on('mouseenter', function(){
         
+        var $height = getGoodHeight($(this).find('figure').height(), $(this).find('img').height());
+        var $elem = $(this).find('.pict-descr');
+
+        $elem.css({'height' : $height })
+        $elem.show();
+        $elem.stop().animate({
+            opacity : 0.8
+        },500);
+    
+    });
+
+    $article.on('mouseleave', function(){
+        
+        var $height = getGoodHeight($(this).find('figure').height(), $(this).find('img').height());
+        var $elem = $(this).find('.pict-descr');
+
+        $elem.css({'height' : $height})
+        $elem.stop().animate({
+            opacity : 0
+        },500, function(){
+            $elem.hide();
+        });
+    });
         
 
 }

@@ -38,6 +38,16 @@ h2 {
 	font-weight:normal !i;
 }
 
+
+.page-header {
+	border-color:#dbdbdb;
+	h1,h2,h3 {
+		background-image:url(../img/icon-puce.png);
+		background-repeat:no-repeat;
+		text-indent:55px;
+	}
+}
+
 .spacer {
 	width:85%;
 	margin:0 auto;
@@ -49,6 +59,7 @@ h2 {
 label {
 	margin-right:7px;
 }
+
 
 .button:hover {
 	text-decoration:none;
@@ -75,16 +86,13 @@ label {
 
 .article-thumb {
 
-
+	cursor:pointer;
 	-moz-box-shadow: 0px 0px 9px #a0a0a0;
 	-webkit-box-shadow: 0px 0px 9px #a0a0a0;
 	box-shadow: 0px 0px 9px #a0a0a0;
 	/*IE 7 AND 8 DO NOT SUPPORT BLUR PROPERTY OF SHADOWS*/
 	border:solid 1px #bababa;
-
-
 	background:#f3f3f3;
-
 	overflow:hidden;
 	position:relative;
 	padding-bottom:30px;
@@ -97,6 +105,28 @@ label {
 		height:160px;
 		img {
 			width:100%;
+		}
+		.pict-descr{
+			position: absolute;
+			z-index: 4;
+			background: #000;
+			width: 100%;
+			top: 0px;
+			height: 160px;
+			overflow: hidden;
+			display:none;
+			opacity:0;
+			h1,h2,h3,h4{
+				margin:50px 7px 7px 7px;
+				padding: 0 0 0 0;
+				color:#FFF;
+				text-align:center;
+			} 
+			p {
+				margin:0px 7px 0 7px;
+				text-align:center;
+				color:#FFF;
+			}
 		}
 	}
 	h3 {
@@ -141,8 +171,17 @@ label {
 	}
 }
 
+.divider-slice {
+	background: url(../img/bg-divider.jpg);
+	height: 8px;
+	position: absolute;
+	z-index: 1000;
+	width: 100%;
+}
+
 .header {	
-	background:#f3f3f3;
+	background:url(../img/satinweave.png);
+
 	margin-top:88px;
 	margin-bottom:30px;
 	border-bottom:solid 1px #bababa;

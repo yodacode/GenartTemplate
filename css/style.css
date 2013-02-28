@@ -26,7 +26,17 @@ h2 {
   font-size: 12px;
   text-align: center;
   padding: 7px;
-  font-weight: normal !important;
+  font-weight: normal !i;
+}
+.page-header {
+  border-color: #dbdbdb;
+}
+.page-header h1,
+.page-header h2,
+.page-header h3 {
+  background-image: url(../img/icon-puce.png);
+  background-repeat: no-repeat;
+  text-indent: 55px;
 }
 .spacer {
   width: 85%;
@@ -40,6 +50,7 @@ label {
 }
 .button:hover {
   text-decoration: none;
+  background: #525252 !important;
 }
 .button.green,
 .button.green:hover,
@@ -60,6 +71,7 @@ label {
   background: #FF0;
 }
 .article-thumb {
+  cursor: pointer;
   -moz-box-shadow: 0px 0px 9px #a0a0a0;
   -webkit-box-shadow: 0px 0px 9px #a0a0a0;
   box-shadow: 0px 0px 9px #a0a0a0;
@@ -81,6 +93,31 @@ label {
 }
 .article-thumb figure img {
   width: 100%;
+}
+.article-thumb figure .pict-descr {
+  position: absolute;
+  z-index: 4;
+  background: #000;
+  width: 100%;
+  top: 0px;
+  height: 160px;
+  overflow: hidden;
+  display: none;
+  opacity: 0;
+}
+.article-thumb figure .pict-descr h1,
+.article-thumb figure .pict-descr h2,
+.article-thumb figure .pict-descr h3,
+.article-thumb figure .pict-descr h4 {
+  margin: 50px 7px 7px 7px;
+  padding: 0 0 0 0;
+  color: #FFF;
+  text-align: center;
+}
+.article-thumb figure .pict-descr p {
+  margin: 0px 7px 0 7px;
+  text-align: center;
+  color: #FFF;
 }
 .article-thumb h3 {
   padding: 10px 10px 0px 10px;
@@ -118,8 +155,15 @@ label {
   box-shadow: none;
   font-weight: bold;
 }
+.divider-slice {
+  background: url(../img/bg-divider.jpg);
+  height: 8px;
+  position: absolute;
+  z-index: 1000;
+  width: 100%;
+}
 .header {
-  background: #f3f3f3;
+  background: url(../img/satinweave.png);
   margin-top: 88px;
   margin-bottom: 30px;
   border-bottom: solid 1px #bababa;
