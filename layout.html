@@ -36,13 +36,11 @@
           <section class="nav-collapse span9 collapse">
             <ul class="nav pull-right">
               <li class="active"><a href="home.html">Accueil</a></li>
-              <li class="dropdown">
-                <a href="artist.html">Artistes</a>
-              </li>
+              <li class="dropdown"><a href="artist.html">Artistes</a></li>
               <li><a href="listing.html">Gallerie</a></li>
               <li><a href="contact.html">Contact</a></li>
               <li class="divider-vertical"></li>
-              <li><a class="button green" href="selection.html">Mes oeuvres (5)</a></li>
+              <li><a class="button green" href="cart.html">Mes oeuvres (5)</a></li>
               <li class="divider-vertical"></li>
               <li><a class="button red" href="connexion.html">Connexion</a></li>
             </ul>
@@ -52,49 +50,6 @@
       </section>
     </nav>
     <!--end header-->
-
-    <script type="text/javascript">
-      
-      $(function(){
-        
-
-        var $href = 'home.html';
-        var isAllow = true;
-
-        var initDom = function(){
-          $('a').on('click', function(e){
-            e.preventDefault();
-            loadPage($(this).attr('href'));
-          });
-        };
-
-        var loadPage = function(href){
-          if(href != $href && isAllow)
-            isAllow = false;
-            $.ajax({
-              url : href,
-              type : "GET",
-              dataType : "html",
-              success : function(data){
-                $('.loader').slideUp();
-                $('.page').empty();
-                $('.page').append(data);
-                isAllow = true;
-                initDom();
-              },
-              error : function(){
-                
-              }
-            });
-        };
-        
-        loadPage($href);
-        
-        
-
-      });
-      
-    </script>
 
     <p class="loader">Chargement...</p>
     <section class="page">

@@ -30,7 +30,6 @@
     -moz-box-shadow: 0px 0px 1px #000000;
     -webkit-box-shadow: 0px 0px 1px #000000;
     box-shadow: 0px 0px 1px #000000;
-    margin-top: 30px;
     overflow: hidden;
     min-height: 390px;
     background: #ECECEC;
@@ -47,4 +46,16 @@
 }
 .myform input {
     width: 80%;
+}
+
+#app-span {
+    margin-bottom: 55px;
+}
+
+.cart figure, p {
+    float: left;
+}
+
+.cart figure {
+    margin: 0;
 }
