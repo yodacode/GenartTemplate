@@ -14,6 +14,7 @@
     <!--<script src="http://code.jquery.com/jquery-latest.js"></script>-->
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap/bootstrap.min.js"></script>
+    <script src="js/validate.js" type="text/javascript"></script>
     <script src="js/script.js"></script>
 
   </head>

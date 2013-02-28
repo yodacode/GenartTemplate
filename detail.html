@@ -22,18 +22,28 @@
             </div>
             <a id="add-oeuvre" class="button red" name="Add">Ajouter à mes oeuvres</a> 
         </div>
+        <!-- 
+            DOCUMENTATION :
 
+        -->
         <div class="span4">
             <div class="myform">
                 <form id="form-art" class="form-horizontal">
-                    <div class="control-group">
-                        <label for="val1">Value 1 : </label><input type="text" id="val1" name="val1">
+                    <div id="val1-control-group" class="control-group">
+                        <label for="val1">Email : * </label>
+                        <div class="controls">
+                            <input type="text" data-error-selector="val1-message" id="val1" name="val1">
+                            <span class="help-inline">Vous devez saisir un Email valide.</span>
+                        </div>
                     </div>
                     <div class="control-group">
                         <label for="val2">Value 2 : </label><input type="text" id="val2" name="val2">
                     </div>
-                    <div class="control-group">
-                        <label for="val3">Value 3 : </label><input type="text" id="val3" name="val3">
+                    <div id="val3-control-group" class="control-group">
+                        <label for="val3">Telephone : *</label>
+                        <div class="controls">    
+                            <input type="text" data-error-selector="val3-message" id="val3" name="val3">
+                        </div>
                     </div>
                     <div class="control-group">
                         <label for="val4">Value 4 : </label><input type="text" id="val4" name="val4">
@@ -46,6 +56,36 @@
             </div>
         </div>
     </section>
+
+    <script type="text/javascript">
+        $(function() {
+            var validator = new FormValidator("form-art",
+                [
+                    {
+                        name: "val1",
+                        rules: 'required|valid_email'
+                    },
+                    {
+                        name: "val3",
+                        rules: 'required'
+                    }
+                ],function(errors, event){
+                if (errors.length > 0) {
+                    for(var index in errors){
+                        console.log(errors[index]);
+                        var idElement = errors[index].id;
+                        var helperSelector = $("#"+idElement).attr("data-error-selector");
+                        $("#"+helperSelector).show();
+                        var groupSelector = "#"+errors[index].name+"-control-group";
+                        $(groupSelector).addClass("error");
+                    }
+                }
+                else{
+                    alert("no error");
+                }
+        });
+    </script>
+
     <section class="container-fluid">
         <div class="spacer"></div>
         <section class="page-header">
