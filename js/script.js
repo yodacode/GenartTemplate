@@ -15,6 +15,7 @@ var init = function(){
         $(this).stop().fadeTo('fast', 1);
     });
 
+
     var $article = $('.article-thumb');
 
     $article.on('click', function(){
