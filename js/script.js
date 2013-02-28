@@ -2,37 +2,10 @@
 var init = function(){
         
 
-    var $href = 'home.html';
-    var isAllow = true;
-
-    var initDom = function(){
-        $('a').on('click', function(e){
-            e.preventDefault();
-            loadPage($(this).attr('href'));
-        });
-    };
-
-    var loadPage = function(href){
-        if(href != $href && isAllow)
-            isAllow = false;
-        $.ajax({
-            url : href,
-            type : "GET",
-            dataType : "html",
-            success : function(data){
-                $('.loader').slideUp();
-                $('.page').empty();
-                $('.page').append(data);
-                isAllow = true;
-                initDom();
-            },
-            error : function(){
-                return false;
-            }
-        });
-    };
-        
-    loadPage($href);
+    $('#inscription-form a').click(function (e) {
+      e.preventDefault();
+      $(this).tab('show');
+    });
         
         
 
@@ -44,9 +17,7 @@ var processing = function(){
     $('#generate').live("click", function(){
         
         var id = $(this).attr('data-val');
-        alert(id);
         var pjs = Processing.getInstanceById(id);
-        alert(pjs);
         //var text = document.getElementById('inputtext').value;
         // var json = $.get("http://api.nytimes.com/svc/search/v1/article?format=json&query=science&begin_date=19890110&end_date=19890111&api-key=9e8ba0bc4ac74914aeed8c9a91f79320:1:67375507");
         var json = {
@@ -130,7 +101,7 @@ var processing = function(){
 
       
 $('document').ready(function(){
-   
+
     init();
     processing();
-});    
+});

@@ -1,4 +1,4 @@
-﻿
+<?php include('header.php');?>
     <header class="header visible-desktop">
       <section class="slice">
         <section class="container">
@@ -39,7 +39,7 @@
           Processing is an open source programming language and environment for people who want to create images, animations, and interactions. 
           Initially developed to serve as a software sketchbook and to teach there are tens of thousands of students.
         </p>
-        <a href="detail.html" class="button green">en savoir plus</a>
+        <a href="detail.php" class="button green">en savoir plus</a>
       </article>
       <article class="span4 article-thumb">
         <figure>
@@ -50,7 +50,7 @@
           Processing is an open source programming language and environment for people who want to create images, animations, and interactions. 
           Initially developed to serve as a software sketchbook and to teach there are tens of thousands of students.
         </p>
-        <a href="detail.html" class="button green">en savoir plus</a>
+        <a href="detail.php" class="button green">en savoir plus</a>
       </article>
       <article class="span4 article-thumb">
         <figure>
@@ -61,7 +61,7 @@
           Processing is an open source programming language and environment for people who want to create images, animations, and interactions. 
           Initially developed to serve as a software sketchbook and to teach there are tens of thousands of students.
         </p>
-        <a href="detail.html" class="button green">en savoir plus</a>
+        <a href="detail.php" class="button green">en savoir plus</a>
       </article>
     </section>
     
@@ -89,7 +89,7 @@
       <ul class="artist-list">
         <?php for($i=0; $i < 6; $i++) : ?>
           <li>
-            <a href="artist-detail.html">
+            <a href="artist-detail.php">
               <img src="img/artist.jpg" class="img-circle img-polaroid"/>
             </a>
           </li>  
@@ -99,3 +99,4 @@
     </section>
   </section><!--end content-->
 
+<?php include('footer.php');?>

@@ -1,3 +1,4 @@
+<?php include('header.php');?>
 <header class="header">
     <section class="container">
         <h1>Information sur l'oeuvre : MegaSuper</h1>
@@ -17,7 +18,6 @@
         
 
         <div class="span8" id="app-span">
-            <div id="appercu"></div>
             <canvas id="newyork" data-processing-sources="pde/newyork.pde">	</canvas>
 
 
@@ -106,7 +106,7 @@
                     </div>
                     -->
                     <div class="control-group">
-                        <label for="val2">>Date de naissance (YYYYMMDD) : </label><input type="text" id="inputtext" placeholder="Type something…">
+                        <label for="val2">>Date de naissance (YYYYMMDD) : </label><input type="text" id="inputtext" placeholder="Type something...">
                     </div>
                     <div class="control-group">
                         <label>Selectionnez votre humeur</label>
@@ -173,7 +173,7 @@
                 Processing is an open source programming language and environment for people who want to create images, animations, and interactions. 
                 Initially developed to serve as a software sketchbook and to teach there are tens of thousands of students.
             </p>
-            <a href="detail.html" class="button green">en savoir plus</a>
+            <a href="detail.php" class="button green">en savoir plus</a>
         </article>
         <article class="span4 article-thumb">
             <figure>
@@ -184,7 +184,7 @@
                 Processing is an open source programming language and environment for people who want to create images, animations, and interactions. 
                 Initially developed to serve as a software sketchbook and to teach there are tens of thousands of students.
             </p>
-            <a href="detail.html" class="button green">en savoir plus</a>
+            <a href="detail.php" class="button green">en savoir plus</a>
         </article>
         <article class="span4 article-thumb">
             <figure>
@@ -195,8 +195,9 @@
                 Processing is an open source programming language and environment for people who want to create images, animations, and interactions. 
                 Initially developed to serve as a software sketchbook and to teach there are tens of thousands of students.
             </p>
-            <a href="detail.html" class="button green">en savoir plus</a>
+            <a href="detail.php" class="button green">en savoir plus</a>
         </article>
     </section>
 </section>
 
+<?php include('footer.php');?>

@@ -3,9 +3,9 @@ boolean b = true;
 color couleur;
 
 void setup(){
-  size(659,390);
+  size(770,390);
   titles = new ArrayList();
-      background(255,0,0);
+      background(0,0,0);
   noLoop();
 }
 

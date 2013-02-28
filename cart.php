@@ -1,3 +1,4 @@
+<?php include('header.php');?>
 <header class="header">
     <section class="container">
         <h3>Mes oeuvres</h3>
@@ -38,7 +39,7 @@
                     <div class="span2"><div class="span1">Total :</div> <span class="badge">30€</span></div>
                 </td>
                 <td class="span3">
-                    <a class="button green" href="detail.html">Voir</a>
+                    <a class="button green" href="detail.php">Voir</a>
                     <a class="button red" href="">Supprimer</a>
                 </td>
             </tr>
@@ -65,7 +66,7 @@
                     <div class="span2"><div class="span1">Total :</div> <span class="badge">30€</span></div>
                 </td>
                 <td class="span3">
-                    <a class="button green" href="detail.html">Voir</a>
+                    <a class="button green" href="detail.php">Voir</a>
                     <a class="button red" href="">Supprimer</a>
                 </td>
             </tr>
@@ -92,7 +93,7 @@
                     <div class="span2"><div class="span1">Total :</div> <span class="badge">30€</span></div>
                 </td>
                 <td class="span3">
-                    <a class="button green" href="detail.html">Voir</a>
+                    <a class="button green" href="detail.php">Voir</a>
                     <a class="button red" href="">Supprimer</a>
                 </td>
             </tr>
@@ -118,3 +119,4 @@
         </tbody>
     </table>
 </section><!--end content-->
+<?php include('footer.php');?>
