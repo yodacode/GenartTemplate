@@ -3,7 +3,7 @@
 
   <header class="header">
     <section class="container">
-      <h3>Gallerie categorie : lorem ipsum</h3>
+      <h1>Gallerie categorie : lorem ipsum</h1>
     </section>
   </header>
 

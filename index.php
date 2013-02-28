@@ -26,10 +26,12 @@
 
 
   <section class="content">
-    <section class="container-fluid">
+    <section class="container">
       <section class="page-header">
         <h1>Les oeuvres les plus populaires</h1>
       </section>
+    </section>
+    <section class="container-fluid">
       <article class="span4 article-thumb">
         <figure>
           <img src="img/picture.jpg"/>
