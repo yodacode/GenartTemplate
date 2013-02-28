@@ -25,21 +25,52 @@
                     <button class="btn btn-large dropdown-toggle" data-toggle="dropdown">
                         <span class="caret"></span>
                     </button>
-                    <ul class="dropdown-menu">
+                    <ul id="choix-support" class="dropdown-menu">
                         <li>Aucun</li>
                         <li class="divider"></li>
-                        <li><figure><img src="img/products/product-1.jpg"/></figure><span class="badge">15€</span></li>
+                        <li>
+                            <figure>
+                                <img src="img/products/product-1.jpg"/>
+                            </figure>
+                            <span data-value="15" class="badge">
+                                15€
+                            </span>
+                        </li>
                         <li class="divider"></li>
-                        <li><figure><img src="img/products/product-2.jpg"/></figure><span class="badge">15€</span></li>
+                        <li>
+                            <figure>
+                                <img src="img/products/product-2.jpg"/>
+                            </figure>
+                            <span data-value="25" class="badge">
+                                25€
+                            </span>
+                        </li>
                     </ul>
                 </div>
             </div>
 
-            <div class="span1">Oeuvre : <span class="badge">15€</span></div>
-            <div class="span1">Support : <span class="badge">15€</span></div>
-            <div class="span1">Total : <span class="badge">30€</span></div>
+            <div class="span1">Oeuvre : <span id="badge-price-oeuvre" data-price-oeuvre="15" class="badge">15€</span></div>
+            <div class="span1">Support : <span id="badge-price-support" class="badge">15€</span></div>
+            <div class="span1">Total : <span id="badge-price-total" class="badge">30€</span></div>
             <a id="add-oeuvre" class="button red" name="Add">Ajouter à mes oeuvres</a> 
         </div>
+        <!-- DOCUMENTATION :
+            
+        -->
+
+        <script type="text/javascript">
+            $(function() {
+                $("#choix-support li").on("click",function(){
+                    var price_support = $(this).find("span.badge").attr("data-value");
+                    var price_oeuvre = $("#badge-price-oeuvre").attr("data-price-oeuvre");
+                    var price_total = parseInt(price_support) + parseInt(price_oeuvre);
+                
+                    $("#badge-price-support").empty().text(price_support+"€");
+                    $("#badge-price-total").empty().text(price_total+"€");
+                });
+            });
+        </script>
+
         <!-- 
             DOCUMENTATION :
             la div control-group doit avoir pour id : <nom_du_champ_associe>-control-group
@@ -51,7 +82,7 @@
             <div class="myform">
                 <form id="form-art">
                     <div id="val1-control-group" class="control-group">
-                        <label for="val1">Email : * </label>
+                        <label for="val1">Email : *</label>
                         <div class="controls">
                             <input type="text" data-error-selector="val1-message" id="val1" name="val1">
                             <span style="display:none;" id="val1-message" class="help-inline">Vous devez saisir un Email valide.</span>
@@ -91,8 +122,8 @@
             var validator = new FormValidator("form-art",
                 [
                     {
-                        name: "val1",
-                        rules: 'required|valid_email'
+                        name: "val1", //name du champ.
+                        rules: 'required|valid_email' //choix du validator chainé par des pipes
                     },
                     {
                         name: "val3",
@@ -108,9 +139,6 @@
                         var groupSelector = "#"+errors[index].name+"-control-group";
                         $(groupSelector).addClass("error");
                     }
-                }
-                else{
-                    alert("no error");
                 }
              });
         });
