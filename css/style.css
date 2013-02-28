@@ -26,7 +26,7 @@ h2 {
   font-size: 12px;
   text-align: center;
   padding: 7px;
-  font-weight: normal !important;
+  font-weight: normal !i;
 }
 .spacer {
   width: 85%;
@@ -38,8 +38,12 @@ h2 {
 label {
   margin-right: 7px;
 }
+.carousel-inner img {
+  width: 75%;
+}
 .button:hover {
   text-decoration: none;
+  background: #525252 !important;
 }
 .button.green,
 .button.green:hover,
