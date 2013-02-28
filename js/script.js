@@ -107,9 +107,47 @@ var processing = function(){
     });
 }
 
+var choixsupport = function(){
+    $("#choix-support li").on("click",function(){
+        var price_support = $(this).find("span.badge").attr("data-value");
+        var price_oeuvre = $("#badge-price-oeuvre").attr("data-price-oeuvre");
+        var price_total = parseInt(price_support) + parseInt(price_oeuvre);
+                
+        $("#badge-price-support").empty().text(price_support+"€");
+        $("#badge-price-total").empty().text(price_total+"€");
+    });
+}
+
+var validatorformart = function(){
+    var validator = new FormValidator("form-art",
+        [
+        {
+            name: "val1", //name du champ.
+            rules: 'required|valid_email' //choix du validator chainé par des pipes
+        },
+        {
+            name: "val3",
+            rules: 'required'
+        }
+        ],function(errors, event){
+            if (errors.length > 0) {
+                for(var index in errors){
+                    console.log(errors[index]);
+                    var idElement = errors[index].id;
+                    var helperSelector = $("#"+idElement).attr("data-error-selector");
+                    $("#"+helperSelector).show();
+                    var groupSelector = "#"+errors[index].name+"-control-group";
+                    $(groupSelector).addClass("error");
+                }
+            }
+        });
+}
+
       
 $('document').ready(function(){
 
     init();
     processing();
+    choixsupport();
+    validatorformart()
 });
