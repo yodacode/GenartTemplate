@@ -27,6 +27,7 @@
 <div class="control-group">
     <label>Selectionnez votre humeur</label>
     <select id="color">
+        <option value="black">Black</option>
         <option value="red">Dynamisme</option>
         <option value="green">calme</option>
     </select>

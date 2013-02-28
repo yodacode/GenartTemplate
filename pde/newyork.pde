@@ -20,6 +20,8 @@ ArrayList addTitles(String t, int x, int y, String _couleur){
       background(255,0,0);
     }else if(couleur == 'green'){
       background(0,255,0);
+    }else if(couleur == 'black'){
+      background(0,0,0);
     }
 
     b = false;
