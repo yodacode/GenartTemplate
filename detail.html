@@ -42,16 +42,19 @@
         </div>
         <!-- 
             DOCUMENTATION :
+            la div control-group doit avoir pour id : <nom_du_champ_associe>-control-group
+            le input doit avoir un attribut : data-error-selector="<nom_du_champ_associe>-message"
+            le span help-inline doit avoir le même id que la valeur de data-error-selector et par défaut doit avoir un display: none;
 
         -->
         <div class="span4">
             <div class="myform">
-                <form id="form-art" class="form-horizontal">
+                <form id="form-art">
                     <div id="val1-control-group" class="control-group">
                         <label for="val1">Email : * </label>
                         <div class="controls">
                             <input type="text" data-error-selector="val1-message" id="val1" name="val1">
-                            <span class="help-inline">Vous devez saisir un Email valide.</span>
+                            <span style="display:none;" id="val1-message" class="help-inline">Vous devez saisir un Email valide.</span>
                         </div>
                     </div>
                     <div class="control-group">
@@ -61,6 +64,7 @@
                         <label for="val3">Telephone : *</label>
                         <div class="controls">    
                             <input type="text" data-error-selector="val3-message" id="val3" name="val3">
+                            <span style="display:none;" id="val3-message" class="help-inline">Vous devez remplir ce champ.</span>
                         </div>
                     </div>
                     <div class="control-group">
@@ -108,6 +112,7 @@
                 else{
                     alert("no error");
                 }
+             });
         });
     </script>
 
