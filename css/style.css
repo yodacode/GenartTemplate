@@ -1,150 +1,137 @@
 * {
-	list-style: none;
-	color: #525252;
+  list-style: none;
+  color: #525252;
 }
-
-h1,h2,h3 {
-	font-weight: normal;
+h1,
+h2,
+h3 {
+  font-weight: normal;
 }
-
 .loader {
-	position: absolute;
-	top: 300px;
+  position: absolute;
+  top: 300px;
 }
-
 h1 {
-	color: #525252;
-	font-size: 25.5px;
+  color: #525252;
+  font-size: 25.5px;
 }
-
 h2 {
-	font-weight: normal;
-	color: #525252;
-	font-size: 20.5px;
+  font-weight: normal;
+  color: #525252;
+  font-size: 20.5px;
 }
-
 .button {
-	display: inline-block;
-	color: #FFF !important;
-	font-size: 12px;
-	text-align: center;
-	padding: 7px;
-	font-weight: normal !i;
+  display: inline-block;
+  color: #FFF !important;
+  font-size: 12px;
+  text-align: center;
+  padding: 7px;
+  font-weight: normal !i;
 }
-
 .spacer {
-	width: 85%;
-	margin: 0 auto;
-	height: 20px;
-	margin-bottom: 30px;
-	border-bottom: dashed 2px #dbdbdb;
+  width: 85%;
+  margin: 0 auto;
+  height: 20px;
+  margin-bottom: 30px;
+  border-bottom: dashed 2px #dbdbdb;
 }
-
 label {
-	margin-right: 7px;
+  margin-right: 7px;
 }
-
 .button:hover {
-	text-decoration: none;
-	background: #525252 !important;
+  text-decoration: none;
+  background: #525252 !important;
 }
-
-.button.green,.button.green:hover,.button.green:active,.button.green:visited {
-	background: #40b7a0 !important;
+.button.green,
+.button.green:hover,
+.button.green:active,
+.button.green:visited {
+  background: #40b7a0 !important;
 }
-
-.button.red,.button.red:hover,.button.red:active,.button.red:visited {
-	background: #ec4343 !important;
+.button.red,
+.button.red:hover,
+.button.red:active,
+.button.red:visited {
+  background: #ec4343 !important;
 }
-
 .auto {
-	margin: 0 auto;
+  margin: 0 auto;
 }
-
 .red {
-	background: #FF0;
+  background: #FF0;
 }
-
 .article-thumb {
-	-webkit-box-shadow: 0px 0px 9px #a0a0a0;
-	box-shadow: 0px 0px 9px #a0a0a0; /*IE 7 AND 8 DO NOT SUPPORT BLUR PROPERTY OF SHADOWS*/
-border: solid 1px #bababa;
-	background: #f3f3f3;
-	overflow: hidden;
-	position: relative;
-	padding-bottom: 30px;
-	margin-bottom: 20px;
-	height: 350px;
-}
+  -moz-box-shadow: 0px 0px 9px #a0a0a0;
+  -webkit-box-shadow: 0px 0px 9px #a0a0a0;
+  box-shadow: 0px 0px 9px #a0a0a0;
+  /*IE 7 AND 8 DO NOT SUPPORT BLUR PROPERTY OF SHADOWS*/
 
+  border: solid 1px #bababa;
+  background: #f3f3f3;
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 30px;
+  margin-bottom: 20px;
+  height: 350px;
+}
 .article-thumb figure {
-	padding: 0 0 0 0;
-	margin: 0 0 0 0;
-	overflow: hidden;
-	height: 160px;
+  padding: 0 0 0 0;
+  margin: 0 0 0 0;
+  overflow: hidden;
+  height: 160px;
 }
-
 .article-thumb figure img {
-	width: 100%;
+  width: 100%;
 }
-
 .article-thumb h3 {
-	padding: 10px 10px 0px 10px;
-	margin: 0px;
+  padding: 10px 10px 0px 10px;
+  margin: 0px;
 }
-
 .article-thumb p {
-	padding: 10px;
-	display: block;
-	overflow: hidden;
-	height: 105px;
-	margin-bottom: 15px;
+  padding: 10px;
+  display: block;
+  overflow: hidden;
+  height: 105px;
+  margin-bottom: 15px;
 }
-
 .article-thumb .button {
-	position: absolute;
-	bottom: 0px;
-	right: 0px;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
 }
-
 .artist-list {
-	overflow: hidden;
+  overflow: hidden;
 }
-
 .artist-list li {
-	float: left;
-	margin-right: 15px;
-	margin-bottom: 15px;
+  float: left;
+  margin-right: 15px;
+  margin-bottom: 15px;
 }
-
 .navbar .navbar-inner {
-	background: #FFF;
-	padding: 7px 0px 7px 0px;
+  background: #FFF;
+  padding: 7px 0px 7px 0px;
 }
-
 .navbar .navbar-inner .nav {
-	margin-top: 15px;
+  margin-top: 15px;
 }
-
 .navbar .navbar-inner .nav .active a {
-	background: none;
-
-	-webkit-box-shadow: none;
-	box-shadow: none;
-	font-weight: bold;
+  background: none;
+  box-shadow: none;
+  font-weight: bold;
 }
-
 .header {
-	background: #f3f3f3;
-	margin-top: 88px;
-	margin-bottom: 30px;
-	border-bottom: solid 1px #bababa;
+  background: #f3f3f3;
+  margin-top: 88px;
+  margin-bottom: 30px;
+  border-bottom: solid 1px #bababa;
 }
-
 .footer {
-	background: #1d1d1d;
-	text-align: center;
-	color: #FFF;
-	padding: 50px 0 50px 0;
-	margin-top: 30px;
+  background: #1d1d1d;
+  text-align: center;
+  color: #FFF;
+  padding: 50px 0 50px 0;
+  margin-top: 30px;
+}
+.footer p {
+  text-align: center;
 }
