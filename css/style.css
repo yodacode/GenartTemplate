@@ -157,7 +157,7 @@ label {
 }
 .divider-slice {
   background: url(../img/bg-divider.jpg);
-  height: 8px;
+  height: 5px;
   position: absolute;
   z-index: 1000;
   width: 100%;
