@@ -22,17 +22,26 @@
 </div>
 -->
 <div class="control-group">
-    <label for="val2">>Date de naissance (YYYYMMDD) : </label><input type="text" id="inputtext" placeholder="Type something...">
+    <label for="inputtext">Date de naissance     : </label>
+    <div class="controls">
+        <input type="text" id="inputtext" placeholder="Tapez n'importe quoi ...">
+        <span class="help-inline"></span>
+    </div>
 </div>
-<div class="control-group">
-    <label>Selectionnez votre humeur</label>
-    <select id="color">
-        <option value="red">Dynamisme</option>
-        <option value="green">calme</option>
-    </select>
+<div id="color-control-group" class="control-group">
+    <label>Selectionnez votre humeur : </label>
+    <div class="controls">
+        <select data-error-selector="color-message" name="color" id="color">
+            <option></option>
+            <option value="red">Dynamisme</option>
+            <option value="green">calme</option>
+        </select>
+        <span id="color-message" class="help-inline">Ce champ est obligatoire.</span>
+    </div>
 </div>
 
 <div class="control-group">
     <a class="button grey" name="Reset">Reset</a> 
     <input class="button red noborder" id="generate" data-val="newyork" type="submit" value="Generez">
 </div>
+
