@@ -25,6 +25,10 @@ var init = function(){
                 $('.page').append(data);
                 isAllow = true;
                 initDom();
+                console.log(window.location.href);
+                var old = window.location.href;
+                console.log(old);
+                //console.log(elem);
             },
             error : function(){
                 return false;
