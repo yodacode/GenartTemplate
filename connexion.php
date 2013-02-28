@@ -46,7 +46,7 @@
 			</ul>
 			<section class="tab-content">
 				
-				<form name="form-artist" class="form-horizontal tab-pane fade active in" id="artist">
+				<form name="form-artist" class="form-horizontal tab-pane fade" id="artist">
 					<div id="nameArtist-control-group" class="control-group">
 						<label for="nameArtist" class="control-label">Nom  * : </label>
 						<div class="controls">
@@ -99,7 +99,7 @@
 					<input type="submit" class="button red noborder pull-right" value="Inscription"/>
 				</form>
 
-				<form name="form-customer" class="form-horizontal tab-pane fade " id="customer">
+				<form name="form-customer" class="form-horizontal tab-pane active in" id="customer">
 					
 					<div id="mailCustomer-control-group" class="control-group">
 						<label for="mailCustomer" class="control-label">E-mail  * : </label>
