@@ -33,6 +33,10 @@
       <article class="span4 article-thumb">
         <figure>
           <img src="img/picture.jpg"/>
+          <section class="pict-descr">
+            <h4>Titre : Art concept</h4>
+            <p>Auteur : Bernado de Zoro</p>
+          </section>
         </figure>
         <h3>Titre de l'oeuvre</h3>
         <p>
@@ -44,6 +48,10 @@
       <article class="span4 article-thumb">
         <figure>
           <img src="img/picture2.jpg"/>
+          <section class="pict-descr">
+            <h4>Titre : Art concept</h4>
+            <p>Auteur : Bernado de Zoro</p>
+          </section>
         </figure>
         <h3>Titre de l'oeuvre</h3>
         <p>
@@ -55,6 +63,10 @@
       <article class="span4 article-thumb">
         <figure>
           <img src="img/picture3.jpg"/>
+          <section class="pict-descr">
+            <h4>Titre : Art concept</h4>
+            <p>Auteur : Bernado de Zoro</p>
+          </section>
         </figure>
         <h3>Titre de l'oeuvre</h3>
         <p>

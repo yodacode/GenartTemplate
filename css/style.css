@@ -38,6 +38,9 @@ h2 {
 label {
   margin-right: 7px;
 }
+.carousel-inner img {
+  width: 75%;
+}
 .button:hover {
   text-decoration: none;
   background: #525252 !important;
@@ -61,6 +64,7 @@ label {
   background: #FF0;
 }
 .article-thumb {
+  cursor: pointer;
   -moz-box-shadow: 0px 0px 9px #a0a0a0;
   -webkit-box-shadow: 0px 0px 9px #a0a0a0;
   box-shadow: 0px 0px 9px #a0a0a0;
@@ -82,6 +86,31 @@ label {
 }
 .article-thumb figure img {
   width: 100%;
+}
+.article-thumb figure .pict-descr {
+  position: absolute;
+  z-index: 4;
+  background: #000;
+  width: 100%;
+  top: 0px;
+  height: 160px;
+  overflow: hidden;
+  display: none;
+  opacity: 0;
+}
+.article-thumb figure .pict-descr h1,
+.article-thumb figure .pict-descr h2,
+.article-thumb figure .pict-descr h3,
+.article-thumb figure .pict-descr h4 {
+  margin: 50px 7px 7px 7px;
+  padding: 0 0 0 0;
+  color: #FFF;
+  text-align: center;
+}
+.article-thumb figure .pict-descr p {
+  margin: 0px 7px 0 7px;
+  text-align: center;
+  color: #FFF;
 }
 .article-thumb h3 {
   padding: 10px 10px 0px 10px;
