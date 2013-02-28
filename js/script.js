@@ -7,12 +7,12 @@ var init = function(){
         $(this).tab('show');
     });
     
-    $('.button').live('mouseover' , function(){
-        $(this).fadeTo('fast', 0.6);
+    $('.button').on('mouseover' , function(){
+        $(this).stop().fadeTo('fast', 0.6);
     });
     
-    $('.button').live('mouseleave' , function(){
-        $(this).fadeTo('fast', 1);
+    $('.button').on('mouseleave' , function(){
+        $(this).stop().fadeTo('fast', 1);
     });
 
 
