@@ -3,8 +3,16 @@ var init = function(){
         
 
     $('#inscription-form a').click(function (e) {
-      e.preventDefault();
-      $(this).tab('show');
+        e.preventDefault();
+        $(this).tab('show');
+    });
+    
+    $('.button').live('mouseover' , function(){
+        $(this).fadeTo('fast', 0.6);
+    });
+    
+    $('.button').live('mouseleave' , function(){
+        $(this).fadeTo('fast', 1);
     });
         
         

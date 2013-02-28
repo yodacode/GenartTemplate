@@ -40,7 +40,6 @@ label {
 }
 .button:hover {
   text-decoration: none;
-  background: #525252 !important;
 }
 .button.green,
 .button.green:hover,
