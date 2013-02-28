@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>My Processing Page</title>
+        <link rel="stylesheet" href="css/bootstrap/bootstrap.css">
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/processing.js"></script>
+        <script src="js/bootstrap/bootstrap.js"></script>
+        <script src="js/script.js"></script>
+    </head>
+    <body>
+        <div class="span4">
+
+            <label>Selectionnez votre humeur</label>
+            <select id="color">
+                <option value="red">Dynamisme</option>
+                <option value="green">calme</option>
+            </select>
+            <a class="button grey" id="generate" data-val="newyork" name="Reset">generer</a> 
+        </div>
+        <div class="span8">
+            <canvas id="newyork" data-processing-sources="pde/newyork.pde">	</canvas>
+        </div>
+    </body>
+</html>
