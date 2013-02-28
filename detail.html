@@ -1,4 +1,3 @@
-
 <header class="header">
     <section class="container">
         <h1>Information sur l'oeuvre : MegaSuper</h1>
@@ -15,10 +14,13 @@
                 </p>
             </div>
         </div>
+        
 
         <div class="span8" id="app-span">
-
             <div id="appercu"></div>
+            <canvas id="newyork" data-processing-sources="pde/newyork.pde">	</canvas>
+
+
             <div class="span3">
                 <div class="btn-group">
                     <button class="btn btn-large">Selectionner un support</button>
@@ -81,6 +83,7 @@
         <div class="span4">
             <div class="myform">
                 <form id="form-art">
+                    <!--
                     <div id="val1-control-group" class="control-group">
                         <label for="val1">Email : *</label>
                         <div class="controls">
@@ -101,9 +104,21 @@
                     <div class="control-group">
                         <label for="val4">Value 4 : </label><input type="text" id="val4" name="val4">
                     </div>
+                    -->
+                    <div class="control-group">
+                        <label for="val2">>Date de naissance (YYYYMMDD) : </label><input type="text" id="inputtext" placeholder="Type something…">
+                    </div>
+                    <div class="control-group">
+                        <label>Selectionnez votre humeur</label>
+                        <select id="color">
+                            <option value="red">Dynamisme</option>
+                            <option value="green">calme</option>
+                        </select>
+                    </div>
+
                     <div class="control-group">
                         <a class="button grey" name="Reset">Reset</a> 
-                        <input class="button red noborder" type="submit" value="Valider">
+                        <input class="button red noborder" id="generate" data-val="newyork" type="submit" value="Generez">
                     </div>
                 </form>
             </div>
@@ -120,16 +135,16 @@
     <script type="text/javascript">
         $(function() {
             var validator = new FormValidator("form-art",
-                [
-                    {
-                        name: "val1", //name du champ.
-                        rules: 'required|valid_email' //choix du validator chainé par des pipes
-                    },
-                    {
-                        name: "val3",
-                        rules: 'required'
-                    }
-                ],function(errors, event){
+            [
+                {
+                    name: "val1", //name du champ.
+                    rules: 'required|valid_email' //choix du validator chainé par des pipes
+                },
+                {
+                    name: "val3",
+                    rules: 'required'
+                }
+            ],function(errors, event){
                 if (errors.length > 0) {
                     for(var index in errors){
                         console.log(errors[index]);
@@ -140,7 +155,7 @@
                         $(groupSelector).addClass("error");
                     }
                 }
-             });
+            });
         });
     </script>
 
