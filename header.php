@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
   <head>
     <title>Template Base</title>
@@ -30,19 +30,19 @@
           </button>
 
           <section class="logo span2">
-            <a href="home.html"><img src="img/logo.png" alt=""/></a>
+            <a href="home.php"><img src="img/logo.png" alt=""/></a>
           </section>
 
           <section class="nav-collapse span9 collapse">
             <ul class="nav pull-right">
-              <li class="active"><a href="home.html">Accueil</a></li>
-              <li class="dropdown"><a href="artist.html">Artistes</a></li>
-              <li><a href="listing.html">Gallerie</a></li>
-              <li><a href="contact.html">Contact</a></li>
+              <li class="active"><a href="home.php">Accueil</a></li>
+              <li class="dropdown"><a href="artist.php">Artistes</a></li>
+              <li><a href="listing.php">Gallerie</a></li>
+              <li><a href="contact.php">Contact</a></li>
               <li class="divider-vertical"></li>
-              <li><a class="button green" href="cart.html">Mes oeuvres (5)</a></li>
+              <li><a class="button green" href="cart.php">Mes oeuvres (5)</a></li>
               <li class="divider-vertical"></li>
-              <li><a class="button red" href="connexion.html">Connexion</a></li>
+              <li><a class="button red" href="connexion.php">Connexion</a></li>
             </ul>
           </section>
 
@@ -50,20 +50,3 @@
       </section>
     </nav>
     <!--end header-->
-
-    <p class="loader">Chargement...</p>
-    <section class="page">
-    </section>
-
-  <!--footer-->
-  <footer class="footer">
-    <section class="container">
-      <p>Copyright © 2013 Genart • Designé, Développé et Administré par la Dream Team</p>
-    </section>
-  </footer>
-  <!--end footer-->
-
-    
-    
-  </body>
-</html>

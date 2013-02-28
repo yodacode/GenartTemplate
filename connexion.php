@@ -1,3 +1,5 @@
+<?php include('header.php');?>
+
 <header class="header">
     <section class="container">
       <h1>Connexion</h1>
@@ -57,3 +59,5 @@
 		</section>
 	</section>
 </section><!--end content-->
+
+<?php include('footer.php');?>

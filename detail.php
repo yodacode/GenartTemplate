@@ -1,4 +1,4 @@
-
+<?php include('header.php');?>
 <header class="header">
     <section class="container">
         <h1>Information sur l'oeuvre : MegaSuper</h1>
@@ -85,7 +85,7 @@
                 Processing is an open source programming language and environment for people who want to create images, animations, and interactions. 
                 Initially developed to serve as a software sketchbook and to teach there are tens of thousands of students.
             </p>
-            <a href="detail.html" class="button green">en savoir plus</a>
+            <a href="detail.php" class="button green">en savoir plus</a>
         </article>
         <article class="span4 article-thumb">
             <figure>
@@ -96,7 +96,7 @@
                 Processing is an open source programming language and environment for people who want to create images, animations, and interactions. 
                 Initially developed to serve as a software sketchbook and to teach there are tens of thousands of students.
             </p>
-            <a href="detail.html" class="button green">en savoir plus</a>
+            <a href="detail.php" class="button green">en savoir plus</a>
         </article>
         <article class="span4 article-thumb">
             <figure>
@@ -107,8 +107,9 @@
                 Processing is an open source programming language and environment for people who want to create images, animations, and interactions. 
                 Initially developed to serve as a software sketchbook and to teach there are tens of thousands of students.
             </p>
-            <a href="detail.html" class="button green">en savoir plus</a>
+            <a href="detail.php" class="button green">en savoir plus</a>
         </article>
     </section>
 </section>
 
+<?php include('footer.php');?>
