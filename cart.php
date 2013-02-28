@@ -40,7 +40,7 @@
                 </td>
                 <td class="span3">
                     <a class="button green" href="detail.php">Voir</a>
-                    <a class="button red" href="">Supprimer</a>
+                     <div id="deleteline"class="button red" >Supprimer</div>
                 </td>
             </tr>
             <tr>
@@ -67,7 +67,7 @@
                 </td>
                 <td class="span3">
                     <a class="button green" href="detail.php">Voir</a>
-                    <a class="button red" href="">Supprimer</a>
+                     <div id="deleteline"class="button red" >Supprimer</div>
                 </td>
             </tr>
             <tr>
@@ -94,7 +94,7 @@
                 </td>
                 <td class="span3">
                     <a class="button green" href="detail.php">Voir</a>
-                    <a class="button red" href="">Supprimer</a>
+                   <div id="deleteline"class="button red" >Supprimer</div>
                 </td>
             </tr>
         </tbody>
