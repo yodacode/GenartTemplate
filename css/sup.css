@@ -52,10 +52,22 @@
     margin-bottom: 55px;
 }
 
-.cart figure, p {
+.cart figure, .cart p {
     float: left;
 }
 
 .cart figure {
     margin: 0;
+}
+
+.cart .button {
+    min-width: 100px;
+}
+
+#appercu {
+    margin-bottom: 20px;
+}
+
+#total-line{
+    text-align: right;
 }
