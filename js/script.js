@@ -2,10 +2,10 @@
 var init = function(){
         
 
-    $('#myTab a').click(function (e) {
-  e.preventDefault();
-  $(this).tab('show');
-})
+    $('#inscription-form a').click(function (e) {
+      e.preventDefault();
+      $(this).tab('show');
+    });
         
         
 
