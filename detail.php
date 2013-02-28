@@ -25,33 +25,78 @@
                     <button class="btn btn-large dropdown-toggle" data-toggle="dropdown">
                         <span class="caret"></span>
                     </button>
-                    <ul class="dropdown-menu">
+                    <ul id="choix-support" class="dropdown-menu">
                         <li>Aucun</li>
                         <li class="divider"></li>
-                        <li><figure><img src="img/products/product-1.jpg"/></figure><span class="badge">15€</span></li>
+                        <li>
+                            <figure>
+                                <img src="img/products/product-1.jpg"/>
+                            </figure>
+                            <span data-value="15" class="badge">
+                                15€
+                            </span>
+                        </li>
                         <li class="divider"></li>
-                        <li><figure><img src="img/products/product-2.jpg"/></figure><span class="badge">15€</span></li>
+                        <li>
+                            <figure>
+                                <img src="img/products/product-2.jpg"/>
+                            </figure>
+                            <span data-value="25" class="badge">
+                                25€
+                            </span>
+                        </li>
                     </ul>
                 </div>
             </div>
 
-            <div class="span1">Oeuvre : <span class="badge">15€</span></div>
-            <div class="span1">Support : <span class="badge">15€</span></div>
-            <div class="span1">Total : <span class="badge">30€</span></div>
+            <div class="span1">Oeuvre : <span id="badge-price-oeuvre" data-price-oeuvre="15" class="badge">15€</span></div>
+            <div class="span1">Support : <span id="badge-price-support" class="badge">15€</span></div>
+            <div class="span1">Total : <span id="badge-price-total" class="badge">30€</span></div>
             <a id="add-oeuvre" class="button red" name="Add">Ajouter à mes oeuvres</a> 
         </div>
+        <!-- DOCUMENTATION :
+            
+        -->
 
+        <script type="text/javascript">
+            $(function() {
+                $("#choix-support li").on("click",function(){
+                    var price_support = $(this).find("span.badge").attr("data-value");
+                    var price_oeuvre = $("#badge-price-oeuvre").attr("data-price-oeuvre");
+                    var price_total = parseInt(price_support) + parseInt(price_oeuvre);
+                
+                    $("#badge-price-support").empty().text(price_support+"€");
+                    $("#badge-price-total").empty().text(price_total+"€");
+                });
+            });
+        </script>
+
+        <!-- 
+            DOCUMENTATION :
+            la div control-group doit avoir pour id : <nom_du_champ_associe>-control-group
+            le input doit avoir un attribut : data-error-selector="<nom_du_champ_associe>-message"
+            le span help-inline doit avoir le même id que la valeur de data-error-selector et par défaut doit avoir un display: none;
+
+        -->
         <div class="span4">
             <div class="myform">
-                <form id="form-art" class="form-horizontal">
-                    <div class="control-group">
-                        <label for="val1">Value 1 : </label><input type="text" id="val1" name="val1">
+                <form id="form-art">
+                    <div id="val1-control-group" class="control-group">
+                        <label for="val1">Email : *</label>
+                        <div class="controls">
+                            <input type="text" data-error-selector="val1-message" id="val1" name="val1">
+                            <span style="display:none;" id="val1-message" class="help-inline">Vous devez saisir un Email valide.</span>
+                        </div>
                     </div>
                     <div class="control-group">
                         <label for="val2">Value 2 : </label><input type="text" id="val2" name="val2">
                     </div>
-                    <div class="control-group">
-                        <label for="val3">Value 3 : </label><input type="text" id="val3" name="val3">
+                    <div id="val3-control-group" class="control-group">
+                        <label for="val3">Telephone : *</label>
+                        <div class="controls">    
+                            <input type="text" data-error-selector="val3-message" id="val3" name="val3">
+                            <span style="display:none;" id="val3-message" class="help-inline">Vous devez remplir ce champ.</span>
+                        </div>
                     </div>
                     <div class="control-group">
                         <label for="val4">Value 4 : </label><input type="text" id="val4" name="val4">
@@ -71,6 +116,34 @@
 
 
     </section>
+
+    <script type="text/javascript">
+        $(function() {
+            var validator = new FormValidator("form-art",
+                [
+                    {
+                        name: "val1", //name du champ.
+                        rules: 'required|valid_email' //choix du validator chainé par des pipes
+                    },
+                    {
+                        name: "val3",
+                        rules: 'required'
+                    }
+                ],function(errors, event){
+                if (errors.length > 0) {
+                    for(var index in errors){
+                        console.log(errors[index]);
+                        var idElement = errors[index].id;
+                        var helperSelector = $("#"+idElement).attr("data-error-selector");
+                        $("#"+helperSelector).show();
+                        var groupSelector = "#"+errors[index].name+"-control-group";
+                        $(groupSelector).addClass("error");
+                    }
+                }
+             });
+        });
+    </script>
+
     <section class="container-fluid">
         <div class="spacer"></div>
         <section class="page-header">
