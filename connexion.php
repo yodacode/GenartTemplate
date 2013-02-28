@@ -31,31 +31,48 @@
 			<section class="page-header">
 				<h2>Inscription</h2>
 			</section>
-			<ul class="nav nav-tabs">
+			<ul id="myTab" class="nav nav-tabs">
 			  <li class="active">
-			    <a href="#">Membre</a>
+			    <a href="#home" data-toggle="tab">Membre</a>
 			  </li>
-			  <li><a href="#">artiste</a></li>
+			  <li><a href="#member" data-toggle="tab">artiste</a></li>
 			</ul>
-			<form class="form-horizontal">
-				<div class="control-group">
-					<label for="login" class="control-label">Identifiant* : </label>
-					<input type="text" id="login" name="login" placeholder="Identifiant"/>
-				</div>
-				<div class="control-group">
-					<label for="pass" class="control-label">E-mail* : </label>
-					<input type="text" id="pass"  name="pass" placeholder="vote-mail@mail.com"/>
-				</div>
-				<div class="control-group">
-					<label for="pass" class="control-label">Mot de passe* : </label>
-					<input type="password" id="pass"  name="pass" placeholder="Mot de passe"/>
-				</div>
-				<div class="control-group">
-					<label for="passConfirm" class="control-label">Confirmation mot de passe* : </label>
-					<input type="password" id="passConfirm"  name="passConfirm" placeholder="Confirmation"/>
-				</div>
-				<input type="submit" class="button red noborder pull-right" value="Inscription"/>
-			</form>
+			<section class="tab-content">
+				
+				<form class="form-horizontal tab-pane fade active in" id="home">
+					<div class="control-group">
+						<label for="login" class="control-label">Identifiant* : </label>
+						<input type="text" id="login" name="login" placeholder="Identifiant"/>
+					</div>
+					<div class="control-group">
+						<label for="pass" class="control-label">E-mail* : </label>
+						<input type="text" id="pass"  name="pass" placeholder="vote-mail@mail.com"/>
+					</div>
+					<div class="control-group">
+						<label for="pass" class="control-label">Mot de passe* : </label>
+						<input type="password" id="pass"  name="pass" placeholder="Mot de passe"/>
+					</div>
+					<div class="control-group">
+						<label for="passConfirm" class="control-label">Confirmation mot de passe* : </label>
+						<input type="password" id="passConfirm"  name="passConfirm" placeholder="Confirmation"/>
+					</div>
+					<input type="submit" class="button red noborder pull-right" value="Inscription"/>
+				</form>
+
+				<form class="form-horizontal tab-pane fade " id="member">
+					<div class="control-group">
+						<label for="login" class="control-label">Identifiant* : </label>
+						<input type="text" id="login" name="login" placeholder="Identifiant"/>
+					</div>
+					<div class="control-group">
+						<label for="pass" class="control-label">E-mail* : </label>
+						<input type="text" id="pass"  name="pass" placeholder="vote-mail@mail.com"/>
+					</div>
+
+					<input type="submit" class="button red noborder pull-right" value="Inscription"/>
+				</form>
+
+			</section>
 		</section>
 	</section>
 </section><!--end content-->
