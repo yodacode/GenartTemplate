@@ -31,12 +31,12 @@
           </button>
 
           <section class="logo span2">
-            <a href="home.php"><img src="img/logo.png" alt=""/></a>
+            <a href="index.php"><img src="img/logo.png" alt=""/></a>
           </section>
 
           <section class="nav-collapse span9 collapse">
             <ul class="nav pull-right">
-              <li class="active"><a href="home.php">Accueil</a></li>
+              <li class="active"><a href="index.php">Accueil</a></li>
               <li class="dropdown"><a href="artist.php">Artistes</a></li>
               <li><a href="listing.php">Gallerie</a></li>
               <li><a href="contact.php">Contact</a></li>
