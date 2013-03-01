@@ -211,7 +211,7 @@
                     },
                     {
                         name: "passwordCustomerConfirm",
-                        rules: 'required|matches[passwordArtist]'
+                        rules: 'required|matches[passwordCustomer]'
                     }
 
                 ],function(errors, event){
