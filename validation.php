@@ -16,7 +16,6 @@
             </a>
         </p>
     </div>
-
 </section><!--end content-->
 
 <?php include('footer.php'); ?>

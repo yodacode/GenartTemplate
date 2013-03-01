@@ -32,7 +32,8 @@
     <label>Selectionnez votre humeur : </label>
     <div class="controls">
         <select data-error-selector="color-message" name="color" id="color">
-            <option></option>
+            <option>Selectionner un model...</option>
+            <option value="black">black</option>
             <option value="red">Dynamisme</option>
             <option value="green">calme</option>
         </select>
