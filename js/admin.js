@@ -12,6 +12,11 @@ var valid = function()
         var repassword = $('#passwordArtistConfirm').val();
         var phone = $('#phoneArtist').val();
         var website = $('#websiteArtist').val();
+        var is_artist = $('#isArtist option:selected').val();
+        var is_admin = $('#isAdmin option:selected').val();
+        
+        var is_admin_txt = $('#isAdmin option:selected').text();
+        var is_artist_txt = $('#isArtist option:selected').text();
         
         var newuser = $(this).attr('data-newuser');
         
@@ -29,13 +34,15 @@ var valid = function()
                 password: password,
                 repassword: repassword,
                 phone: phone,
-                website: website
+                website: website,
+                is_admin: is_admin,
+                is_artist: is_artist
             },
             success: function(data){
                 
                 if("true" == newuser){
                     
-                    var e = "<tr>";
+                    var e = "<tr id='tr-user-" + id + "'>";
                     e = e + "<td>" + id + "</td>";
                     e = e + "<td><div id='div-nom-" + id + "'>" + name + "</div></td>";
                     e = e + "<td><div id='div-prenom-" + id + "'>" + firstname + "</div></td>";
@@ -43,7 +50,8 @@ var valid = function()
                     e = e + "<td><div id='div-password-" + id + "'>" + password + "</div></td>";
                     e = e + "<td><div id='div-phone-" + id + "'>" + phone + "</div></td>";
                     e = e + "<td><div id='div-web-" + id + "'>" + website + "</div></td>";
-                    e = e + "<td><div id='div-web-" + id + "'>" + website + "</div></td>";
+                    e = e + "<td><div id='div-isartist-" + id + "'>" + is_artist_txt + "</div></td>";
+                    e = e + "<td><div id='div-isadmin-" + id + "'>" + is_admin_txt + "</div></td>";
                     e = e + "<td>";
                     e = e + "<a data-id=" + id + " href='#modal-user' role='button' class='button green edit-user' data-toggle='modal'>Edit</a>";
                     e = e + "<a data-id=" + id + " href='#modal-confirm' role='button' class='button red delete-user' data-toggle='modal'>Supprimer</a>";
@@ -144,15 +152,18 @@ var deletefunction = function()
     $('.delete-user').live('click', function(){
         var elem = $(this);
         var id = elem.attr('data-id');
-        $('#confirm').attr('data-value', 'tr-user' + id)
+        $('#confirm-delete').attr('data-value', 'tr-user-' + id);
+        $('#confirm-message').text('Êtes-vous sûr de vouloir supprimer cet utilisateur ?')
     });
     
 };
 
 var confirm = function()
 {
-    $('#valid-user').live('click', function(){
-        alert($(this).attr('data-value'));
+    $('#confirm-delete').live('click', function(){
+        var c = $(this).attr('data-value');
+        $('#' + c).remove();
+        
     });
 }
 
