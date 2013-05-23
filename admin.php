@@ -50,7 +50,7 @@
                             <div id="div-phone-1">0102030405</div>
                         </td>
                         <td>
-                            <div id="div-web-1">httpd://google.fr</div>
+                            <div id="div-web-1">http://google.fr</div>
                         </td>
                         <td>
                             <div id="div-isartist-1">Oui</div>
@@ -112,6 +112,5 @@
 <?php include('modal-user.php'); ?>
 <?php include('modal-product.php'); ?>
 <?php include('modal-project.php'); ?>
-<?php include('modal-galery.php'); ?>
 
 <?php include('footer.php'); ?>
