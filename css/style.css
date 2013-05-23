@@ -50,7 +50,7 @@ label {
 }
 .button:hover {
   text-decoration: none;
-  background: #525252 !important;
+  
 }
 .button.green,
 .button.green:hover,
@@ -178,3 +178,22 @@ label {
 .footer p {
   text-align: center;
 }
+
+.admin-table {
+    width: 100%;
+}
+
+.admin-table th{
+   height: 60px;
+   border-width: 1px;
+   border-bottom-style: solid;
+}
+
+.admin-table tr{
+   height: 40px;
+}
+
+.admin-table .tr-s{
+    background: #e7e7e7;
+}
+

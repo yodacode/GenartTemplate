@@ -14,7 +14,11 @@ var init = function(){
     $('.button').on('mouseleave' , function(){
         $(this).stop().fadeTo('fast', 1);
     });
-
+    
+    $('#myTab a').click(function (e) {
+        e.preventDefault();
+        $(this).tab('show');
+    })
 
     var $article = $('.article-thumb');
 
