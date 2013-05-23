@@ -7,6 +7,16 @@ h2,
 h3 {
   font-weight: normal;
 }
+.text-center {
+  text-align: center !important;
+}
+.ref {
+  padding-top: 30px !important;
+  padding-bottom: 30px !important;
+}
+.img-detail-artist {
+  width:100%;
+}
 .loader {
   position: absolute;
   top: 300px;
