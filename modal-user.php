@@ -9,7 +9,7 @@
         <div id="nameArtist-control-group" class="control-group">
             <label for="nameArtist" class="control-label">Nom  * : </label>
             <div class="controls">
-                <input data-error-selector="nameArtist-message" type="text" id="nameArtist"  name="nameArtist" placeholder="Prénom"/>
+                <input data-error-selector="nameArtist-message" type="text" id="nameArtist"  name="nameArtist" placeholder="Nom"/>
                 <span class="help-inline" style="display:none;" id="nameArtist-message"> Ce champ est obligatoire. </span>
             </div>
         </div>

@@ -85,9 +85,38 @@
                         <th>Dimension X</th>
                         <th>Dimension Y</th>
                         <th>Dimension Z</th>
+                        <th>Actions</th>
                         
                     </tr>
+                    <tr id="tr-product-1">
+                        <td>
+                            1
+                        </td>
+                        <td>
+                            <div id="div-productname-1">produit 1</div>
+                        </td>
+                        <td>
+                            <div id="div-productprice-1">20</div>
+                        </td>
+                        <td>
+                            <div id="div-productdescription-1">description 1</div>
+                        </td>
+                        <td>
+                            <div id="div-dimx-1">20</div>
+                        </td>
+                        <td>
+                            <div id="div-dimy-1">40</div>
+                        </td>
+                        <td>
+                            <div id="div-dimz-1">20</div>
+                        </td>
+                        <td>
+                            <a data-id="1" href="#modal-product" role="button" class="button green edit-product" data-toggle="modal">Edit</a>
+                            <a data-id="1" href="#modal-confirm" role="button" class="button red delete-product" data-toggle="modal">Supprimer</a>
+                        </td>
+                    </tr>
                 </table>
+                <div data-new-id="6" href="#modal-product" role="button" class="button green add-product" data-toggle="modal">Add Product</div>
             </div>
             <div class="tab-pane fade" id="projects">
                 <div class="span9">

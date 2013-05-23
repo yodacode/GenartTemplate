@@ -119,6 +119,32 @@ var edit = function()
         
     });
     
+    $('.edit-product').live('click', function(){
+        
+        var elem = $(this);
+        var id = elem.attr('data-id');
+        
+        var nom = $('#div-productname-' + id).text();
+        var prix = $('#div-productprice-' + id).text();
+        var dimx = $('#div-dimx-' + id).text();
+        var dimy = $('#div-dimy-' + id).text();
+        var dimz = $('#div-dimz-' + id).text();
+        var description = $('#div-productdescription-' + id).text();
+        
+        $('#valid-product').attr('data-id', id);
+        $('#valid-product').attr('data-newproduct', "false");
+        
+        $('#nameProduct').val(nom);
+        $('#priceProduct').val(prix);
+        $('#descriptionProduct').val(description);
+        $('#dimxProduct').val(dimx);
+        $('#dimyProduct').val(dimy);
+        $('#dimzProduct').val(dimz);
+        
+        $('#modal-label-product').text("Edition du produit " + nom);
+        
+    });
+    
 };
 
 var add = function()
