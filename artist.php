@@ -24,6 +24,60 @@
 			</div>
 		</div>
    </div>
+
+   <section class="container-fluid">
+        <div class="spacer"></div>
+        <section class="page-header">
+            <h2>Les oeuvres de cet artiste</h2>
+        </section>
+        <article class="span4 article-thumb">
+            <figure>
+                <img src="img/picture2.jpg"/>
+                <section class="pict-descr">
+                    <h4>Titre : Art concept</h4>
+                    <p>Auteur : Bernado de Zoro</p>
+                </section>
+            </figure>
+            
+            <h3>Titre de l'oeuvre</h3>
+            <p>
+                Processing is an open source programming language and environment for people who want to create images, animations, and interactions. 
+                Initially developed to serve as a software sketchbook and to teach there are tens of thousands of students.
+            </p>
+            <a href="detail.php" class="button green">en savoir plus</a>
+        </article>
+        <article class="span4 article-thumb">
+            <figure>
+                <img src="img/picture2.jpg"/>
+                <section class="pict-descr">
+                  <h4>Titre : Art concept</h4>
+                  <p>Auteur : Bernado de Zoro</p>
+                </section>
+            </figure>
+            <h3>Titre de l'oeuvre</h3>
+            <p>
+                Processing is an open source programming language and environment for people who want to create images, animations, and interactions. 
+                Initially developed to serve as a software sketchbook and to teach there are tens of thousands of students.
+            </p>
+            <a href="detail.php" class="button green">en savoir plus</a>
+        </article>
+        <article class="span4 article-thumb">
+            <figure>
+                <img src="img/picture2.jpg"/>
+                <section class="pict-descr">
+                  <h4>Titre : Art concept</h4>
+                  <p>Auteur : Bernado de Zoro</p>
+                </section>
+            </figure>
+            <h3>Titre de l'oeuvre</h3>
+            <p>
+                Processing is an open source programming language and environment for people who want to create images, animations, and interactions. 
+                Initially developed to serve as a software sketchbook and to teach there are tens of thousands of students.
+            </p>
+            <a href="detail.php" class="button green">en savoir plus</a>
+        </article>
+    </section>
+
   </section><!--end content-->
 
  <?php include('footer.php');?>
