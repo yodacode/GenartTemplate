@@ -17,7 +17,7 @@ var valid = function()
         
         $.ajax({
             type: 'post',
-            url: '',
+            url: 'http://localhost:8080/GenArt/dbArtist',
             data: {
                 newuser: newuser,
                 id: id,
@@ -89,7 +89,7 @@ var valid = function()
         
         $.ajax({
             type: 'post',
-            url: '',
+            url: 'http://localhost:8080/GenArt/dbCustomer',
             data: {
                 newcustomer: newcustomer,
                 id: id,
@@ -106,7 +106,7 @@ var valid = function()
                     var e = "<tr id='tr-customer-" + id + "'>";
                     e = e + "<td>" + id + "</td>";
                     e = e + "<td><div id='div-mailcustomer-" + id + "'>" + mailCustomer + "</div></td>";
-                    e = e + "<td><div id='div-passwordcustomer-" + id + "'>" + password + "</div></td>";
+                    e = e + "<td><div id='div-passwordcustomer-" + id + "'>**********</div></td>";
                     e = e + "<td>";
                     e = e + "<a data-id=" + id + " href='#modal-customer' role='button' class='button green edit-customer' data-toggle='modal'>Edit</a>";
                     e = e + "<a data-id=" + id + " href='#modal-confirm' role='button' class='button red delete-customer' data-toggle='modal'>Supprimer</a>";
@@ -123,7 +123,7 @@ var valid = function()
                 } else {
                     
                     $('#div-mailcustomer-' + id).text(mailCustomer);
-                    $('#div-passwordcustomer-' + id).text(password);
+                    $('#div-passwordcustomer-' + id).text("**********");
                     
                 }  
                 
@@ -351,6 +351,7 @@ var edit = function()
         var pass = $('#div-password-' + id).text();
         var phone = $('#div-phone-' + id).text();
         var web = $('#div-web-' + id).text();
+        var isAdmin = $('#div-isAdmin-' + id).text();
         
         $('#valid-user').attr('data-id', id);
         $('#valid-user').attr('data-newuser', "false");
@@ -421,7 +422,6 @@ var edit = function()
         var prix = $('#div-projectprice-' + id).text();
         var description = $('#div-projectdescription-' + id).text();
         var artist = $('#div-projectartist-' + id).text();
-        $("#artistProject option[value='" + id + "']").attr('selected','selected');
         
         $('#valid-project').attr('data-id', id);
         $('#valid-project').attr('data-newproject', "false");
@@ -429,7 +429,7 @@ var edit = function()
         $('#nameProject').val(nom);
         $('#prixProject').val(prix);
         $('#descriptionProject').val(description);
-        $('#artistProject').val(id);
+        $('#artistProject').val(artist);
         
         $('#modal-label-project').text("Edition du projet " + nom);
         
@@ -445,8 +445,10 @@ var edit = function()
         
         $('#valid-cart').attr('data-id', id);
         $('#valid-cart').attr('data-newcart', "false");
-        $('#clientCart').val(id);
-
+        
+        $('#numberCart').val(num);
+        $('#clientCart').val(client);
+        
         $('#modal-label-project').text("Edition de la commande " + num);
         
     });
@@ -589,7 +591,26 @@ var confirm = function()
 {
     $('#confirm-delete').live('click', function(){
         var c = $(this).attr('data-value');
-        $('#' + c).remove();
+        
+        
+        $.ajax({
+            type: 'post',
+            url: 'http://localhost:8080/GenArt/dbArtist',
+            data: {
+                action: "delete",
+                id: "22"
+            },
+            success: function(data){
+               console.log("delete");
+               $('#' + c).remove();
+                
+            }, 
+            error: function(data){
+                
+                alert('err');
+                
+            }
+        });
         
     });
 }
