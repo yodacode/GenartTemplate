@@ -142,10 +142,10 @@ var valid = function()
         var id = $(this).attr('data-id');
        
         var cartNumber = $('#numberCart').val();
-        var cartCustomer = $('#artistProject option:selected').text();
-        var id_customer =  $('#artistProject option:selected').val();
+        var cartCustomer = $('#clientCart option:selected').text();
+        var id_customer =  $('#clientCart option:selected').val();
         var newcart = $(this).attr('data-newcart');
-        
+        alert(id_customer);
         $('#valid-cart').attr('data-newcart', "false");
         
         $.ajax({
