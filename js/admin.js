@@ -12,15 +12,11 @@ var valid = function()
         var repassword = $('#passwordArtistConfirm').val();
         var phone = $('#phoneArtist').val();
         var website = $('#websiteArtist').val();
-        var is_artist = $('#isArtist option:selected').val();
         var is_admin = $('#isAdmin option:selected').val();
         
         var is_admin_txt = $('#isAdmin option:selected').text();
-        var is_artist_txt = $('#isArtist option:selected').text();
         
         var newuser = $(this).attr('data-newuser');
-        
-        $('#valid-user').attr('data-newuser', "false");
         
         $.ajax({
             type: 'post',
@@ -35,11 +31,12 @@ var valid = function()
                 repassword: repassword,
                 phone: phone,
                 website: website,
-                is_admin: is_admin,
-                is_artist: is_artist
+                is_admin: is_admin
             },
             success: function(data){
                 
+                $('#valid-user').attr('data-newuser', "false");
+        
                 if("true" == newuser){
                     
                     var e = "<tr id='tr-user-" + id + "'>";
@@ -50,7 +47,6 @@ var valid = function()
                     e = e + "<td><div id='div-password-" + id + "'>" + password + "</div></td>";
                     e = e + "<td><div id='div-phone-" + id + "'>" + phone + "</div></td>";
                     e = e + "<td><div id='div-web-" + id + "'>" + website + "</div></td>";
-                    e = e + "<td><div id='div-isartist-" + id + "'>" + is_artist_txt + "</div></td>";
                     e = e + "<td><div id='div-isadmin-" + id + "'>" + is_admin_txt + "</div></td>";
                     e = e + "<td>";
                     e = e + "<a data-id=" + id + " href='#modal-user' role='button' class='button green edit-user' data-toggle='modal'>Edit</a>";
@@ -73,7 +69,269 @@ var valid = function()
                     $('#div-password-' + id).text(password);
                     $('#div-phone-' + id).text(phone);
                     $('#div-web-' + id).text(website);
-                    $('#div-isArtist-' + id).text();
+                    $('#div-isAdmin-' + id).text();
+                }  
+                
+            }, 
+            error: function(data){
+                
+                alert('err');
+                
+            }
+        });
+       
+    });
+    
+    $('#valid-customer').on('click', function(){
+       
+        var id = $(this).attr('data-id');
+       
+        var mailCustomer = $('#mailCustomer').val();
+        var password = $('#passwordCustomer').val();
+        var repassword = $('#passwordCustomerConfirm').val();
+                        
+        var newcustomer = $(this).attr('data-newcustomer');
+        
+        $.ajax({
+            type: 'post',
+            url: '',
+            data: {
+                newcustomer: newcustomer,
+                id: id,
+                mailCustomer: mailCustomer,
+                password: password,
+                repassword: repassword
+            },
+            success: function(data){
+                
+                $('#valid-customer').attr('data-newcustomer', "false");
+        
+                if("true" == newcustomer){
+                    
+                    var e = "<tr id='tr-customer-" + id + "'>";
+                    e = e + "<td>" + id + "</td>";
+                    e = e + "<td><div id='div-mailcustomer-" + id + "'>" + mailCustomer + "</div></td>";
+                    e = e + "<td><div id='div-passwordcustomer-" + id + "'>" + password + "</div></td>";
+                    e = e + "<td>";
+                    e = e + "<a data-id=" + id + " href='#modal-customer' role='button' class='button green edit-customer' data-toggle='modal'>Edit</a>";
+                    e = e + "<a data-id=" + id + " href='#modal-confirm' role='button' class='button red delete-customer' data-toggle='modal'>Supprimer</a>";
+                    e = e + "</td>";
+                    e = e + "</tr>";
+                    
+                    $('#customer-tab tr:last').after(e);
+        
+                    var new_id = parseInt(id) + 1;
+        
+                    $('.add-customer').attr('data-new-id', new_id);
+       
+                    
+                } else {
+                    
+                    $('#div-mailcustomer-' + id).text(mailCustomer);
+                    $('#div-passwordcustomer-' + id).text(password);
+                    
+                }  
+                
+            }, 
+            error: function(data){
+                
+                alert('err');
+                
+            }
+        });
+       
+    });
+    
+    $('#valid-cart').on('click', function(){
+       
+        var id = $(this).attr('data-id');
+       
+        var cartNumber = $('#numberCart').val();
+        var cartCustomer = $('#clientCart').val();
+                       
+        var newcart = $(this).attr('data-newcart');
+        
+        $('#valid-cart').attr('data-newcart', "false");
+        
+        $.ajax({
+            type: 'post',
+            url: '',
+            data: {
+                newcart: newcart,
+                id: id,
+                cartNumber: cartNumber,
+                cartCustomer: cartCustomer
+            },
+            success: function(data){
+                
+                if("true" == newcart){
+                    
+                    var e = "<tr id='tr-cart-" + id + "'>";
+                    e = e + "<td>" + id + "</td>";
+                    e = e + "<td><div id='div-numbercart-" + id + "'>" + cartNumber + "</div></td>";
+                    e = e + "<td><div id='div-clientcart-" + id + "'>" + cartCustomer + "</div></td>";
+                    e = e + "<td>";
+                    e = e + "<a data-id=" + id + " href='#modal-cart' role='button' class='button green edit-cart' data-toggle='modal'>Edit</a>";
+                    e = e + "<a data-id=" + id + " href='#modal-confirm' role='button' class='button red delete-cart' data-toggle='modal'>Supprimer</a>";
+                    e = e + "</td>";
+                    e = e + "</tr>";
+                    
+                    $('#cart-tab tr:last').after(e);
+        
+                    var new_id = parseInt(id) + 1;
+        
+                    $('.add-cart').attr('data-new-id', new_id);
+       
+                    
+                } else {
+                    
+                    $('#div-numbercart-' + id).text(cartNumber);
+                    $('#div-clientcart-' + id).text(cartCustomer);
+                }  
+                
+            }, 
+            error: function(data){
+                
+                alert('err');
+                
+            }
+        });
+       
+    });
+    
+    $('#valid-product').on('click', function(){
+       
+        var id = $(this).attr('data-id');
+       
+        var name = $('#nameProduct').val();
+        var price = $('#priceProduct').val();
+        var description = $('#descriptionProduct').val();
+        var dimx = $('#dimxProduct').val();
+        var dimy = $('#dimyProduct').val();
+        var dimz = $('#dimzProduct').val();
+                alert(name);
+                 alert(price); 
+                 alert(description);
+                  alert(dimx);
+                  alert(dimy);
+                   alert(dimz);
+        var newproduct = $(this).attr('data-newproduct');
+        
+        $('#valid-product').attr('data-newproduct', "false");
+        
+        $.ajax({
+            type: 'post',
+            url: '',
+            data: {
+                newproduct: newproduct,
+                id: id,
+                name: name,
+                price: price,
+                description: description,
+                dimx: dimx,
+                dimy: dimy,
+                dimz: dimz
+            },
+            success: function(data){
+                
+                if("true" == newproduct){
+                    
+                    var e = "<tr id='tr-product-" + id + "'>";
+                    e = e + "<td>" + id + "</td>";
+                    e = e + "<td><div id='div-productname-" + id + "'>" + name + "</div></td>";
+                    e = e + "<td><div id='div-productprice-" + id + "'>" + price + "</div></td>";
+                    e = e + "<td><div id='div-productdescription-" + id + "'>" + description + "</div></td>";
+                    e = e + "<td><div id='div-dimx-" + id + "'>" + dimx + "</div></td>";
+                    e = e + "<td><div id='div-dimy-" + id + "'>" + dimy + "</div></td>";
+                    e = e + "<td><div id='div-dimz-" + id + "'>" + dimz + "</div></td>";
+                    e = e + "<td>";
+                    e = e + "<a data-id=" + id + " href='#modal-product' role='button' class='button green edit-product' data-toggle='modal'>Edit</a>";
+                    e = e + "<a data-id=" + id + " href='#modal-confirm' role='button' class='button red delete-product' data-toggle='modal'>Supprimer</a>";
+                    e = e + "</td>";
+                    e = e + "</tr>";
+                    
+                    $('#product-tab tr:last').after(e);
+        
+                    var new_id = parseInt(id) + 1;
+        
+                    $('.add-product').attr('data-new-id', new_id);
+       
+                    
+                } else {
+                    
+                    $('#div-productname-' + id).text(name);
+                    $('#div-productprice-' + id).text(price);
+                    $('#div-productdescription-' + id).text(description);
+                    $('#div-dimx-' + id).text(dimx);
+                    $('#div-dimy-' + id).text(dimy);
+                    $('#div-dimz-' + id).text(dimz);
+                }  
+                
+            }, 
+            error: function(data){
+                
+                alert('err');
+                
+            }
+        });
+       
+    });
+    
+    $('#valid-project').on('click', function(){
+       
+        var id = $(this).attr('data-id');
+       
+        var name = $('#nameProject').val();
+        var description = $('#descriptionProject').val();
+        var artiste_id = $('#artistProject').val();
+        var price = $('#prixProject').val();
+        
+        var newproject = $(this).attr('data-newproject');
+        
+        $('#valid-project').attr('data-newproject', "false");
+        
+        $.ajax({
+            type: 'post',
+            url: '',
+            data: {
+                newproject: newproject,
+                id: id,
+                name: name,
+                description: description,
+                artiste_id: artiste_id,
+                price: price
+            },
+            success: function(data){
+                
+                if("true" == newproject){
+                    
+                    var e = "<tr id='tr-user-" + id + "'>";
+                    e = e + "<td>" + id + "</td>";
+                    e = e + "<td><div id='div-projectname-" + id + "'>" + name + "</div></td>";
+                    e = e + "<td><div id='div-projectdescription-" + id + "'>" + description + "</div></td>";
+                    e = e + "<td><div id='div-projectartist-" + id + "'>" + artiste_id + "</div></td>";
+                    e = e + "<td><div id='div-projectprice-" + id + "'>" + price + "</div></td>";
+                    e = e + "<td><div id='div-projectimg-" + id + "'>" + '' + "</div></td>";
+                    e = e + "<td>";
+                    e = e + "<a data-id=" + id + " href='#modal-project' role='button' class='button green edit-project' data-toggle='modal'>Edit</a>";
+                    e = e + "<a data-id=" + id + " href='#modal-confirm' role='button' class='button red delete-project' data-toggle='modal'>Supprimer</a>";
+                    e = e + "</td>";
+                    e = e + "</tr>";
+                    
+                    $('#project-tab tr:last').after(e);
+        
+                    var new_id = parseInt(id) + 1;
+        
+                    $('.add-project').attr('data-new-id', new_id);
+       
+                    
+                } else {
+                    
+                    $('#div-projectname-' + id).text(name);
+                    $('#div-projectdescription-' + id).text(description);
+                    $('#div-projectartist-' + id).text(artiste_id);
+                    $('#div-projectprice-' + id).text(price);
+                    $('#div-projectimg-' + id).text('');
                 }  
                 
             }, 
@@ -102,7 +360,7 @@ var edit = function()
         var pass = $('#div-password-' + id).text();
         var phone = $('#div-phone-' + id).text();
         var web = $('#div-web-' + id).text();
-        var isArtist = $('#div-isArtist-' + id).text();
+        var isAdmin = $('#div-isAdmin-' + id).text();
         
         $('#valid-user').attr('data-id', id);
         $('#valid-user').attr('data-newuser', "false");
@@ -116,6 +374,25 @@ var edit = function()
         $('#websiteArtist').val(web);
         
         $('#modal-label-user').text("Edition de l'utilisateur " + nom + " " +  prenom);
+        
+    });
+    
+    $('.edit-customer').live('click', function(){
+        
+        var elem = $(this);
+        var id = elem.attr('data-id');
+        
+        var mail = $('#div-mailcustomer-' + id).text();
+        var pass = $('#div-passwordcustomer-' + id).text();
+        
+        $('#valid-customer').attr('data-id', id);
+        $('#valid-customer').attr('data-newcustomer', "false");
+        
+        $('#mailCustomer').val(mail);
+        $('#passwordCustomer').val(pass);
+        $('#passwordCustomerConfirm').val(pass);
+        
+        $('#modal-label-customer').text("Edition du client " + mail);
         
     });
     
@@ -145,11 +422,67 @@ var edit = function()
         
     });
     
+    $('.edit-project').live('click', function(){
+        
+        var elem = $(this);
+        var id = elem.attr('data-id');
+        
+        var nom = $('#div-projectname-' + id).text();
+        var prix = $('#div-projectprice-' + id).text();
+        var description = $('#div-projectdescription-' + id).text();
+        var artist = $('#div-projectartist-' + id).text();
+        
+        $('#valid-project').attr('data-id', id);
+        $('#valid-project').attr('data-newproject', "false");
+        
+        $('#nameProject').val(nom);
+        $('#prixProject').val(prix);
+        $('#descriptionProject').val(description);
+        $('#artistProject').val(artist);
+        
+        $('#modal-label-project').text("Edition du projet " + nom);
+        
+    });
+    
+    $('.edit-cart').live('click', function(){
+        
+        var elem = $(this);
+        var id = elem.attr('data-id');
+        
+        var num = $('#div-numbercart-' + id).text();
+        var client = $('#div-clientcart-' + id).text();
+        
+        $('#valid-cart').attr('data-id', id);
+        $('#valid-cart').attr('data-newcart', "false");
+        
+        $('#numberCart').val(num);
+        $('#clientCart').val(client);
+        
+        $('#modal-label-project').text("Edition de la commande " + num);
+        
+    });
+    
 };
 
 var add = function()
 {
 
+    $('.add-customer').on('click', function(){
+        
+        var new_id = $(this).attr('data-new-id');
+        
+        $('#valid-customer').attr('data-id', new_id);
+        
+        $('#mailCustomer').val('');
+        $('#passwordCustomer').val('');
+        $('#passwordCustomerConfirm').val('');
+        
+        $('#modal-label-customer').text("Ajout d'un nouveau client");
+        
+        $('#valid-customer').attr('data-newcustomer', "true");
+        
+    });
+    
     $('.add-user').on('click', function(){
         
         var new_id = $(this).attr('data-new-id');
@@ -164,9 +497,60 @@ var add = function()
         $('#phoneArtist').val('');
         $('#websiteArtist').val('');
         
-        $('#modal-label-user').text("Ajout d'un nouvel utilisateu");
+        $('#modal-label-user').text("Ajout d'un nouvel utilisateur");
         
         $('#valid-user').attr('data-newuser', "true");
+        
+    });
+    
+    $('.add-cart').on('click', function(){
+        
+        var new_id = $(this).attr('data-new-id');
+        
+        $('#valid-cart').attr('data-id', new_id);
+        
+        $('#numberCart').val('');
+        $('#clientCart').val('');
+        
+        $('#modal-label-cart').text("Ajout d'une nouvelle commande");
+        
+        $('#valid-cart').attr('data-newcart', "true");
+        
+    });
+    
+    $('.add-product').on('click', function(){
+        
+        var new_id = $(this).attr('data-new-id');
+        
+        $('#valid-product').attr('data-id', new_id);
+        
+        $('#nameProduct').val('');
+        $('#priceProduct').val('');
+        $('#descriptionProduct').val('');
+        $('#dimxProduct').val('');
+        $('#dimyProduct').val('');
+        $('#dimzProduct').val('');
+        
+        $('#modal-label-user').text("Ajout d'un nouvel utilisateur");
+        
+        $('#valid-product').attr('data-newproduct', "true");
+        
+    });
+    
+    $('.add-project').on('click', function(){
+        
+        var new_id = $(this).attr('data-new-id');
+        
+        $('#valid-project').attr('data-id', new_id);
+        
+        $('#nameProject').val('');
+        $('#prixProject').val('');
+        $('#descriptionProject').val('');
+        $('#artistProject').val('');
+        
+        $('#modal-label-project').text("Ajout d'un nouveau projet");
+        
+        $('#valid-project').attr('data-newproject', "true");
         
     });
   
@@ -180,6 +564,34 @@ var deletefunction = function()
         var id = elem.attr('data-id');
         $('#confirm-delete').attr('data-value', 'tr-user-' + id);
         $('#confirm-message').text('Êtes-vous sûr de vouloir supprimer cet utilisateur ?')
+    });
+    
+    $('.delete-customer').live('click', function(){
+        var elem = $(this);
+        var id = elem.attr('data-id');
+        $('#confirm-delete').attr('data-value', 'tr-customer-' + id);
+        $('#confirm-message').text('Êtes-vous sûr de vouloir supprimer ce client ?')
+    });
+    
+    $('.delete-cart').live('click', function(){
+        var elem = $(this);
+        var id = elem.attr('data-id');
+        $('#confirm-delete').attr('data-value', 'tr-cart-' + id);
+        $('#confirm-message').text('Êtes-vous sûr de vouloir supprimer cette commande ?')
+    });
+    
+    $('.delete-product').live('click', function(){
+        var elem = $(this);
+        var id = elem.attr('data-id');
+        $('#confirm-delete').attr('data-value', 'tr-product-' + id);
+        $('#confirm-message').text('Êtes-vous sûr de vouloir supprimer ce produit ?')
+    });
+    
+    $('.delete-project').live('click', function(){
+        var elem = $(this);
+        var id = elem.attr('data-id');
+        $('#confirm-delete').attr('data-value', 'tr-project-' + id);
+        $('#confirm-message').text('Êtes-vous sûr de vouloir supprimer ce projet ?')
     });
     
 };

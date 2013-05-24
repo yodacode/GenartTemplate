@@ -4,6 +4,7 @@
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
         <h3 id="modal-label-confirm">Confirmer</h3>
     </div>
+    <div class="divider-slice"></div>
     <div class="modal-body">
         <h2 id="confirm-message"></h2>
     </div>

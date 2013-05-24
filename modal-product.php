@@ -13,7 +13,7 @@
                 <span class="help-inline" style="display:none;" id="nameProduct-message"> Ce champ est obligatoire. </span>
             </div>
         </div>
-        <div id="firstnameProduct-control-group" class="control-group">
+        <div id="priceProduct-control-group" class="control-group">
             <label for="priceProduct" class="control-label">Prix  * : </label>
             <div class="controls">
                 <input data-error-selector="priceProduct-message" type="text" id="priceProduct"  name="priceProduct" placeholder="Prix"/>
@@ -51,6 +51,6 @@
     </div>
     <div class="modal-footer">
         <div class="button red" data-dismiss="modal" aria-hidden="true">Annuler</div>
-        <div class="button green">Save changes</div>
+        <div id="valid-product" data-newproduct="false" data-dismiss="modal" class="button green">Valider</div>
     </div>
 </div>
