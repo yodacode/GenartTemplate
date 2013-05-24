@@ -94,8 +94,9 @@
                     </div>
 
                     <div class="control-group">
-                        <input type="radio" style="width:auto" name="sex" value="1"><span style="margin-left:7px">Homme</span><br>
-                        <input type="radio" style="width:auto" name="sex" value="2"><span style="margin-left:7px">Femme</span>
+                        <label for="brothersister" class="control-label">Vous êtes ?</label>
+                        <input type="radio" style="width:auto" name="sex" value="1"><span style="margin-left:7px">Un homme</span><br>
+                        <input type="radio" style="width:auto" name="sex" value="2"><span style="margin-left:7px">Une femme</span>
                     </div>
 
                     
