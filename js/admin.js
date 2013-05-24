@@ -589,16 +589,50 @@ var deletefunction = function()
 
 var confirm = function()
 {
+    var URL = null;
+    $('a.button').each(function(){
+        $(this).on('click',function(){
+            var parent = $(this).parents('.tab-pane').first();
+            var type = parent.attr('id');
+
+            switch(type){
+                case 'users':
+                    URL = 'http://localhost:8080/GenArt/dbUsers';
+                    alert(URL);
+                break;
+                case 'clients':
+                    URL = 'http://localhost:8080/GenArt/dbClients';
+                    alert(URL);
+                break;
+                case 'carts':
+                    URL = 'http://localhost:8080/GenArt/dbCarts';
+                    alert(URL);
+                break;
+                case 'products':
+                    URL = 'http://localhost:8080/GenArt/dbProducts';
+                    alert(URL);
+                break;
+                case 'projects':
+                    URL = 'http://localhost:8080/GenArt/dbProjects';
+                    alert(URL);
+                break;
+
+
+            }
+
+        });
+    });
+
     $('#confirm-delete').live('click', function(){
         var c = $(this).attr('data-value');
-        
+        var type = $(this).parents('.tab-pane').first();
         
         $.ajax({
             type: 'post',
             url: 'http://localhost:8080/GenArt/dbArtist',
             data: {
                 action: "delete",
-                id: "22"
+                id: c
             },
             success: function(data){
                console.log("delete");
