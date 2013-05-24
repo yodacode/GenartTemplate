@@ -74,7 +74,7 @@
                         <th>Password</th>
                         <th>Action</th>
                     </tr>
-                    <tr id="tr-customer-1">
+                    <tr id="tr-customer-1" data-id="999">
                         <td>
                             1
                         </td>
