@@ -625,7 +625,6 @@ var confirm = function()
 
     $('#confirm-delete').live('click', function(){
         var c = $(this).attr('data-value');
-        var type = $(this).parents('.tab-pane').first();
         
         $.ajax({
             type: 'post',
