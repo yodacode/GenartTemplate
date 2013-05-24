@@ -590,11 +590,12 @@ var deletefunction = function()
 var confirm = function()
 {
     var URL = null;
+    var ID = null;
     $('a.button').each(function(){
         $(this).on('click',function(){
             var parent = $(this).parents('.tab-pane').first();
             var type = parent.attr('id');
-            var ID = $(this).parents('tr').attr('data-id');
+            ID = $(this).parents('tr').attr('data-id');
 
             switch(type){
                 case 'users':
@@ -626,11 +627,11 @@ var confirm = function()
 
     $('#confirm-delete').live('click', function(){
         var c = $(this).attr('data-value');
-        
+        alert(ID)
 
         $.ajax({
             type: 'post',
-            url: 'http://localhost:8080/GenArt/dbArtist',
+            url: URL,
             data: {
                 action: "delete",
                 id: ID
