@@ -351,7 +351,6 @@ var edit = function()
         var pass = $('#div-password-' + id).text();
         var phone = $('#div-phone-' + id).text();
         var web = $('#div-web-' + id).text();
-        var isAdmin = $('#div-isAdmin-' + id).text();
         
         $('#valid-user').attr('data-id', id);
         $('#valid-user').attr('data-newuser', "false");
@@ -422,6 +421,7 @@ var edit = function()
         var prix = $('#div-projectprice-' + id).text();
         var description = $('#div-projectdescription-' + id).text();
         var artist = $('#div-projectartist-' + id).text();
+        $("#artistProject option[value='" + id + "']").attr('selected','selected');
         
         $('#valid-project').attr('data-id', id);
         $('#valid-project').attr('data-newproject', "false");
@@ -429,7 +429,7 @@ var edit = function()
         $('#nameProject').val(nom);
         $('#prixProject').val(prix);
         $('#descriptionProject').val(description);
-        $('#artistProject').val(artist);
+        $('#artistProject').val(id);
         
         $('#modal-label-project').text("Edition du projet " + nom);
         
@@ -445,10 +445,8 @@ var edit = function()
         
         $('#valid-cart').attr('data-id', id);
         $('#valid-cart').attr('data-newcart', "false");
-        
-        $('#numberCart').val(num);
-        $('#clientCart').val(client);
-        
+        $('#clientCart').val(id);
+
         $('#modal-label-project').text("Edition de la commande " + num);
         
     });
