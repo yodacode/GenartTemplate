@@ -28,7 +28,6 @@
                         <th>Password</th>
                         <th>Telephone</th>
                         <th>Site Web</th>
-                        <th>Is Admin</th>
                         <th>Action</th>
                     </tr>
                     <tr id="tr-user-1">
@@ -52,9 +51,6 @@
                         </td>
                         <td>
                             <div id="div-web-1">http://google.fr</div>
-                        </td>
-                        <td>
-                            <div id="div-isadmin-1">Oui</div>
                         </td>
                         <td>
                             <a data-id="1" href="#modal-user" role="button" class="button green edit-user" data-toggle="modal">Edit</a>

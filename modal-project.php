@@ -22,8 +22,11 @@
         <div id="artistProject-control-group" class="control-group">
             <label for="artistProject" class="control-label">Artiste  * : </label>
             <div class="controls">
-                <input data-error-selector="artistProject-message" type="text" id="artistProject"  name="artistProject" placeholder="user-mail@mail.com"/>
-                <span class="help-inline" style="display:none;" id="artistProject-message"> Veuillez entrer un E-mail valide. </span>
+               <select id="artistProject">
+                    <option value="0">Selectionner un artiste</option>
+                    <option value="1">Michel</option>
+                    <option value="2">Jean Claude</option>
+                </select>
             </div>
         </div>
         <div id="prixProject-control-group" class="control-group">

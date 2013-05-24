@@ -16,8 +16,11 @@
         <div id="clientCart-control-group" class="control-group">
             <label for="clientCart" class="control-label">Client  * : </label>
             <div class="controls">
-                <input data-error-selector="clientCart-message" type="text" id="clientCart"  name="clientCart" placeholder="Prénom"/>
-                <span class="help-inline" style="display:none;" id="firstnameCart-message"> Ce champ est obligatoire. </span>
+                <select id="clientCart">
+                    <option value="0">Selectionner un client</option>
+                    <option value="1">Michel</option>
+                    <option value="2">Jean Claude</option>
+                </select>
             </div>
         </div>
     </div>

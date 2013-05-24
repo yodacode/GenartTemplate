@@ -12,9 +12,6 @@ var valid = function()
         var repassword = $('#passwordArtistConfirm').val();
         var phone = $('#phoneArtist').val();
         var website = $('#websiteArtist').val();
-        var is_admin = $('#isAdmin option:selected').val();
-        
-        var is_admin_txt = $('#isAdmin option:selected').text();
         
         var newuser = $(this).attr('data-newuser');
         
@@ -30,8 +27,7 @@ var valid = function()
                 password: password,
                 repassword: repassword,
                 phone: phone,
-                website: website,
-                is_admin: is_admin
+                website: website
             },
             success: function(data){
                 
@@ -47,7 +43,6 @@ var valid = function()
                     e = e + "<td><div id='div-password-" + id + "'>" + password + "</div></td>";
                     e = e + "<td><div id='div-phone-" + id + "'>" + phone + "</div></td>";
                     e = e + "<td><div id='div-web-" + id + "'>" + website + "</div></td>";
-                    e = e + "<td><div id='div-isadmin-" + id + "'>" + is_admin_txt + "</div></td>";
                     e = e + "<td>";
                     e = e + "<a data-id=" + id + " href='#modal-user' role='button' class='button green edit-user' data-toggle='modal'>Edit</a>";
                     e = e + "<a data-id=" + id + " href='#modal-confirm' role='button' class='button red delete-user' data-toggle='modal'>Supprimer</a>";
@@ -69,7 +64,7 @@ var valid = function()
                     $('#div-password-' + id).text(password);
                     $('#div-phone-' + id).text(phone);
                     $('#div-web-' + id).text(website);
-                    $('#div-isAdmin-' + id).text();
+                    
                 }  
                 
             }, 
@@ -147,8 +142,8 @@ var valid = function()
         var id = $(this).attr('data-id');
        
         var cartNumber = $('#numberCart').val();
-        var cartCustomer = $('#clientCart').val();
-                       
+        var cartCustomer = $('#artistProject option:selected').text();
+        var id_customer =  $('#artistProject option:selected').val();
         var newcart = $(this).attr('data-newcart');
         
         $('#valid-cart').attr('data-newcart', "false");
@@ -160,7 +155,7 @@ var valid = function()
                 newcart: newcart,
                 id: id,
                 cartNumber: cartNumber,
-                cartCustomer: cartCustomer
+                id_customer: id_customer
             },
             success: function(data){
                 
@@ -209,12 +204,7 @@ var valid = function()
         var dimx = $('#dimxProduct').val();
         var dimy = $('#dimyProduct').val();
         var dimz = $('#dimzProduct').val();
-                alert(name);
-                 alert(price); 
-                 alert(description);
-                  alert(dimx);
-                  alert(dimy);
-                   alert(dimz);
+        
         var newproduct = $(this).attr('data-newproduct');
         
         $('#valid-product').attr('data-newproduct', "false");
@@ -283,7 +273,8 @@ var valid = function()
        
         var name = $('#nameProject').val();
         var description = $('#descriptionProject').val();
-        var artiste_id = $('#artistProject').val();
+        var artistename = $('#artistProject option:selected').text();
+        var artiste_id =  $('#artistProject option:selected').val();
         var price = $('#prixProject').val();
         
         var newproject = $(this).attr('data-newproject');
@@ -309,7 +300,7 @@ var valid = function()
                     e = e + "<td>" + id + "</td>";
                     e = e + "<td><div id='div-projectname-" + id + "'>" + name + "</div></td>";
                     e = e + "<td><div id='div-projectdescription-" + id + "'>" + description + "</div></td>";
-                    e = e + "<td><div id='div-projectartist-" + id + "'>" + artiste_id + "</div></td>";
+                    e = e + "<td><div id='div-projectartist-" + id + "'>" + artistename + "</div></td>";
                     e = e + "<td><div id='div-projectprice-" + id + "'>" + price + "</div></td>";
                     e = e + "<td><div id='div-projectimg-" + id + "'>" + '' + "</div></td>";
                     e = e + "<td>";
@@ -329,7 +320,7 @@ var valid = function()
                     
                     $('#div-projectname-' + id).text(name);
                     $('#div-projectdescription-' + id).text(description);
-                    $('#div-projectartist-' + id).text(artiste_id);
+                    $('#div-projectartist-' + id).text(artistename);
                     $('#div-projectprice-' + id).text(price);
                     $('#div-projectimg-' + id).text('');
                 }  
